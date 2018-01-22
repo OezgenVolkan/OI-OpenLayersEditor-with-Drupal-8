@@ -40,14 +40,19 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 * ##### XAMPP installieren und Konfigurieren
 
-   XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel (Abbildung 1).
+   XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel, wie unten im Bild zu sehen.
    
    ![alt text](https://a.fsdn.com/con/app/proj/xampp/screenshots/Screen%20Shot%202016-02-19%20at%2016.png/1 "XAMPP Control Panel")
-   Abbildung 1
    
    Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt. Durch diesen Schritt wurde ein vollfunktionsfähiger lokaler Webserver mit MySQL-Datenbank Anbindung aufgesetzt. Nun kann man über einen Web-Browser unter der Adresse `http://localhost/` auf den lokalen Webserver zugreifen.
    
    Durch die Installation von XAMPP wurden am gewünschten Installationsort unter dem Ordner `XAMPP` mehrere Verzeichnisse und Dateien abgelegt. Für dieses Projekt ist das Verzeichnis `htdocs` von Bedeutung. Dies ist der öffentliche Ordner, wo die Source-Dateien der Webanwendungen gespeichert werden und über die Adresse `http://localhost/[Name_Webanwendung]` durch einen Web-Browser abrufbar sind. In dieses Verzeichnis wird auch dieses Projekt gespeichert und ist somit über `http://localhost/OI-OpenLayersEditor-with-WordPress` erreichbar. 
+
+* ##### MySQL-Datenbank Tabelle über phpMyAdmin erstellen
+
+   Für die WordPress Installation wird eine MySQL-Datenbank Tabelle benötigt, die Konfiguration für WordPress folgt im nächsten Kapitel. Da das MySQL-Modul von XAMPP am gestartet ist, kann man über den Browser unter der Adresse `http://localhost/phpmyadmin` auf phpMyAdmin zugreifen, wie im folgenden Bild dargestellt.
+   
+   ![alt text](https://upload.wikimedia.org/wikipedia/commons/0/06/Screenshot-127.0.0.1_-_localhost_phpMyAdmin_3.3.2deb1ubuntu1_-_Chromium.png "phpMyAdmin")
 
 #### 3.1.2 WordPress
 
