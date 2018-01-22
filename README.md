@@ -42,7 +42,10 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
    XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel (Abbildung 1).
    
-   ![alt text](https://a.fsdn.com/con/app/proj/xampp/screenshots/Screen%20Shot%202016-02-19%20at%2016.png/1 "Logo Title Text 1")
+   ![alt text](https://a.fsdn.com/con/app/proj/xampp/screenshots/Screen%20Shot%202016-02-19%20at%2016.png/1 "XAMPP Control Panel")
+   Abbildung 1
+   
+   Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt. Durch diesen Schritt haben wir einen vollfunktionsfähigen Webserver mit MySQL-Datenbank anbindung. Nun kan man über einen Web-Browser unter der Adresse `http://localhost/` auf den Webserver zugreifen.
 
 #### 3.1.2 WordPress
 
