@@ -101,8 +101,10 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
    Nachdem die WordPress Installation erfolgreich fertig gestellt ist, wird es Zeit OpenLayers in die WordPress Umgebung einzubinden. Dazu benötigen wir die Folgenden html script- und link-Tags:
    
-   `<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
-   <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>`
+   ```Html
+   <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+   <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
+   ```
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
