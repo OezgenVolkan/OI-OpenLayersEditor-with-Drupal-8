@@ -32,8 +32,8 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 ## 3 Vorbereitung
 ### 3.1 Verwendete Anwendungen und Bibliotheken
-#### 3.1.1 XAMPP
-
+### 3.1.1 XAMPP
+------
 * ##### Was ist XAMPP:
 
    XAMPP ist ein Open-Source Programmpaket. Es ermöglicht das Installieren und Konfigurieren eines Apache Webservers mit MySQL, PHP und Perl. Die Software wendet sich hauptsächlich an Entwickler, die eine Entwicklungsumgebung mit Datenbankanbindung benötigen. Durch die Nutzung erhält der Entwickler einen lokalen Apache-Webserver.
@@ -81,7 +81,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    Nachdem wir die nötigen Datenbank Informationen eingegeben haben, klicken wir auf senden und wenn alles gut läuft kommt die letzte Seite der Installation, wie unten zu sehen.
    
-   ![alt text](https://www.perun.net/wp-content/uploads/2015/12/wordpress-installieren.png "WordPress Allgemeine Informationen")
+   ![alt text](https://www.miss-webdesign.at/mw/wp-content/uploads/2016/01/wordpress-installieren-website-informationen.png "WordPress allgemeine Informationen")
    
    WordPress möchte nun, dass wir den `Titel` der Webseite eingeben, hier ist der Titel gleich des Verzeichnisses, also `OI-OpenLayersEditor-with-Wordpress`. `Benutzername`, `Passwort` und `E-Mail-Adresse` werden vom Nutzer ausgewählt und sind für den späteren Login im Backend-Bereich wichtig. 
 
