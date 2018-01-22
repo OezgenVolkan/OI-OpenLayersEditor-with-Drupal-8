@@ -38,7 +38,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
    XAMPP ist ein Open-Source Programmpaket. Es ermöglicht das Installieren und Konfigurieren eines Apache Webservers mit MySQL, PHP und Perl. Die Software wendet sich hauptsächlich an Entwickler, die eine Entwicklungsumgebung mit Datenbankanbindung benötigen. Durch die Nutzung erhält der Entwickler einen lokalen Apache-Webserver.
 
-* ##### XAMPP installieren und Konfigurieren
+* ##### XAMPP installieren und konfigurieren
 
    XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel, wie unten im Bild zu sehen.
    
@@ -64,7 +64,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 * ##### Installation:
 
-   Bevor wir die Anwendung aufsetzen können müssen wir es ersteinmal WordPress herunterladen. Unter dem Link https://de.wordpress.org/download/ können wir die Source-Dateien als Zip downloaden.
+   Bevor wir die Anwendung aufsetzen können müssen wir es ersteinmal WordPress herunterladen. Unter dem Link https://de.wordpress.org/download/ können wir die Source-Dateien als Zip downloaden. Die Zip-Datei wird nun in das `htdocs/OI-OpenLayersEditor-with-Wordpress` Verzeichnis, welches in Kapitel **3.1.1 - XAMPP installieren und konfigurieren** erstellt wurde, entpackt. Als nächsten Schritt rufen wir die Adresse `http://localhost/OI-OpenLayersEditor-with-Wordpress` über ein Browser auf, es erscheint die Folgende Seite.
+   
+   ![alt text](http://homepageanleitung.de/wp-content/uploads/2015/07/wordpress-installieren.png "WordPress Begrüßung")
 
 
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
