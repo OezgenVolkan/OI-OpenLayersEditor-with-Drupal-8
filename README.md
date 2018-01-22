@@ -14,7 +14,7 @@ Geodaten vorhanden sind.
 
 Die Dokumentation ist wie folgt gegliedert. Zunächst wird im Kapitel 2 das Produkt vorgestellt. Dabei
 wird die Produktvision näher erläutert sowie die Zielgruppe für das Produkt beschrieben. Das 3.
-Kapitel dient der Vorbereitung. Hier werden die verwendeten Webtechnologien und die
+Kapitel dient der Vorbereitung. Hier werden die verwendeten Anwendungen und Bibliotheken und die
 Aufgaben der Software für das Produkt erläutert. Im 4. Kapitel wird die Realisierung dokumentiert. So
 wird beschrieben wie die Softwarelösung implementiert wird. 
 
@@ -30,8 +30,10 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 
 ## 3 Vorbereitung
-### 3.1 Verwendetete Webtechnologien
-#### 3.1.1 WordPress Installation
+### 3.1 Verwendetete Anwendungen und Bibliotheken
+#### 3.1.1 XAMPP
+
+#### 3.1.2 WordPress
 
 * ##### Was ist WordPress:
 
@@ -41,8 +43,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
    Bevor wir die Anwendung aufsetzen können müssen wir es ersteinmal WordPress herunterladen. Unter dem Link https://de.wordpress.org/download/ können wir die Source-Dateien als Zip downloaden.
 
-#### 3.1.2 OpenLayers JavaScript-Bibliothek einbinden
 
+#### 3.1.3 OpenLayers JavaScript-Bibliothek
+##### OpenLayers-Bibliothek einbinden
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
