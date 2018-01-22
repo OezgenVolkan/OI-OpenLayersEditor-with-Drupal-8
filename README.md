@@ -30,7 +30,12 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 ### 3.1 Verwendetete Webtechnologien
 #### 3.1.1 WordPress Installation
 
-WordPress
+##### Was ist WordPress:
+
+WordPress ist eine Open-Source-Software, zur Verwaltung der Inhalte einer Webseite. Mit der Webanwendung können Weblogs, Webseiten oder Webanwendungen erstellt werden. WordPress kann auch hierarchische Seiten verwalten und gestattet den Einsatz als Content-Management-System (CMS). Es basiert auf der Skriptsprache PHP und arbeitet mit einer MySQL-Datenbank.
+
+##### Installation:
+
 https://de.wordpress.org/download/
 
 #### 3.1.2 OpenLayers JavaScript-Bibliothek einbinden
