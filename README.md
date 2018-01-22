@@ -29,7 +29,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 ## 3 Vorbereitung
 ### 3.1 Verwendetete Webtechnologien
 #### 3.1.1 Wordpress Installation
-#### 3.1.2 OpenLayers einbinden
+#### 3.1.2 OpenLayers JavaScript-Bibliothek einbinden
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
