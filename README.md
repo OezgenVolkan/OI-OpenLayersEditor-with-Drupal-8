@@ -32,8 +32,10 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 ## 3 Vorbereitung
 ### 3.1 Verwendete Anwendungen und Bibliotheken
-### 3.1.1 XAMPP
-------
+
+---
+#### 3.1.1 XAMPP
+---
 * ##### Was ist XAMPP:
 
    XAMPP ist ein Open-Source Programmpaket. Es ermöglicht das Installieren und Konfigurieren eines Apache Webservers mit MySQL, PHP und Perl. Die Software wendet sich hauptsächlich an Entwickler, die eine Entwicklungsumgebung mit Datenbankanbindung benötigen. Durch die Nutzung erhält der Entwickler einen lokalen Apache-Webserver.
@@ -56,7 +58,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    Über phpMyAdmin kann man Datenbanktabellen anlegen und bearbeiten. Wir möchten eine Datenbanktabelle anlegen, dazu klicken wir links in der Navigation auf den ersten Eintrag mit der Bezeichnung `Neu`. Hier vergeben wir lediglich den Namen der Tabelle, hier `osmeditor` **(Wichtig für die Folgende WordPress Installation)**.
 
+---
 #### 3.1.2 WordPress
+---
 
 * ##### Was ist WordPress:
 
