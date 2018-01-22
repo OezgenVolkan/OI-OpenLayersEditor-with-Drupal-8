@@ -87,10 +87,14 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    ![alt text](https://www.miss-webdesign.at/mw/wp-content/uploads/2016/01/wordpress-installieren-website-informationen.png "WordPress allgemeine Informationen")
    
-   WordPress möchte nun, dass wir den `Titel` der Webseite eingeben, hier ist der Titel gleich des Verzeichnisses, also `OI-OpenLayersEditor-with-Wordpress`. `Benutzername`, `Passwort` und `E-Mail-Adresse` werden vom Nutzer ausgewählt und sind für den späteren Login im Backend-Bereich wichtig. 
+   WordPress möchte nun, dass wir den `Titel` der Webseite eingeben, hier ist der Titel gleich des Verzeichnisses, also `OI-OpenLayersEditor-with-Wordpress`. `Benutzername`, `Passwort` und `E-Mail-Adresse` werden vom Nutzer ausgewählt und sind für den späteren Login im Backend-Bereich wichtig. Nachdem alle Eingaben gemacht wurden, wird WordPress mit Klick auf `WordPress Installieren` installiert.
 
+---
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
-##### OpenLayers-Bibliothek einbinden
+---
+
+##### Was ist OpenLayers:
+##### OpenLayers-Bibliothek einbinden:
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
