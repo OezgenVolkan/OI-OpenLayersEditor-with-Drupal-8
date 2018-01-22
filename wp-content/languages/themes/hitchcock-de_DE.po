@@ -1,0 +1,192 @@
+# Translation of Themes - Hitchcock in German
+# This file is distributed under the same license as the Themes - Hitchcock package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-01-29 03:36:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: de\n"
+"Project-Id-Version: Themes - Hitchcock\n"
+
+#. Theme Name of the plugin/theme
+msgid "Hitchcock"
+msgstr "Hitchcock"
+
+#: single.php:104
+msgid "Previous"
+msgstr "Vorheriger"
+
+#: single.php:94 single.php:104
+msgid "Post"
+msgstr "in Artikel"
+
+#: single.php:94
+msgid "Next"
+msgstr "Nächster"
+
+#: single.php:71
+msgid "In"
+msgstr "in"
+
+#: search.php:50
+msgid "No results. Try again, would you kindly?"
+msgstr "Keine Fundstellen; möchtest Du noch einmal probieren?"
+
+#: search.php:9 search.php:37
+msgid "Search Results"
+msgstr "Suchergebnisseiten"
+
+#: page.php:62 single.php:128
+msgid "We couldn't find any posts that matched your query. Please try again."
+msgstr "Für diesen Suchbegriff gibt es keine Beiträge. Bitte probiere es noch einmal."
+
+#: page.php:48
+msgid "Edit Page"
+msgstr "Seite bearbeiten"
+
+#: page.php:40 single.php:55
+msgid "Pages:"
+msgstr "Seiten"
+
+#: index.php:17
+msgid "Page %s of %s"
+msgstr "Seite %s von %s"
+
+#: header.php:47 searchform.php:2
+msgid "Search Form"
+msgstr "Suchfeld"
+
+#: functions.php:471
+msgid "Accent Color"
+msgstr "Akzentfarbe"
+
+#: functions.php:445
+msgid "Upload a logo to replace the default site title in the sidebar/header"
+msgstr "Lade ein Logo hoch, um den Standard-Seitentitel in der Sidebar/Header zu ersetzen"
+
+#: functions.php:443 functions.php:479
+msgid "Logo"
+msgstr "Logo"
+
+#: functions.php:416
+msgid "Your comment is awaiting moderation."
+msgstr "Dein Kommentar wird derzeit moderiert."
+
+#: functions.php:405
+msgid "Reply"
+msgstr "Antwort"
+
+#: functions.php:388
+msgid "Post Author"
+msgstr "Autor der Seiten"
+
+#: functions.php:370 functions.php:412
+msgid "Edit"
+msgstr "Überarbeiten"
+
+#: functions.php:370
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: functions.php:52
+msgid "Social Menu"
+msgstr "Social Media Menü"
+
+#: functions.php:51
+msgid "Primary Menu"
+msgstr "Hauptmenü"
+
+#: footer.php:4
+msgid "Theme by"
+msgstr "Thema von"
+
+#: content.php:9
+msgid "Sticky"
+msgstr "Angeheftet"
+
+#: comments.php:114
+msgid "Website"
+msgstr "Webseite:"
+
+#: comments.php:108
+msgid "Email"
+msgstr "E–Mail"
+
+#: comments.php:102
+msgid "Name"
+msgstr "Vorname"
+
+#: comments.php:84
+msgid "Leave a Reply"
+msgstr "Antworten"
+
+#: comments.php:65
+msgid "Newer"
+msgstr "neuesten"
+
+#: comments.php:59
+msgid "Older"
+msgstr "ältesten"
+
+#: comments.php:41
+msgid "Pingback"
+msgid_plural "Pingbacks"
+msgstr[0] "Pingback"
+msgstr[1] "Pingbacks"
+
+#: comments.php:21 comments.php:94
+msgid "Comment"
+msgid_plural "Comments"
+msgstr[0] "Kommentar"
+msgstr[1] "Kommentare"
+
+#: archive.php:33
+msgid "Archive"
+msgstr "im Archiv"
+
+#: archive.php:28
+msgid "Author"
+msgstr "Autoren"
+
+#: archive.php:24
+msgid "Tag"
+msgstr "Tag"
+
+#: archive.php:20
+msgid "Category"
+msgstr "Kategorien"
+
+#: archive.php:16
+msgid "Year"
+msgstr "Jahr"
+
+#: archive.php:12
+msgid "Month"
+msgstr "Monat"
+
+#: archive.php:8
+msgid "Date"
+msgstr "Datum"
+
+#: 404.php:19
+msgid "It seems like you have tried to open a page that doesn't exist. It could have been deleted, moved, or it never existed at all. You are welcome to search for what you are looking for with the form below."
+msgstr "Scheinbar hast du eine Seite aufgerufen, die nicht existiert. Sie könnte gelöscht oder verschoben worden sein – oder hat nie existiert. Gerne kannst du die nachfolgende Suchfunktion nutzen, um die gewünschten Inhalte zu finden."
+
+#: 404.php:11
+msgid "Error 404"
+msgstr "Inhalt nicht gefunden (Systemfehler 404)"
+
+#. Author URI of the plugin/theme
+msgid "http://www.andersnoren.se"
+msgstr "http://www.andersnoren.se"
+
+#. Author of the plugin/theme
+msgid "Anders Norén"
+msgstr "Anders Norén"
+
+#. Theme URI of the plugin/theme
+msgid "http://www.andersnoren.se/teman/hitchcock-wordpress-theme/"
+msgstr "http://www.andersnoren.se/teman/hitchcock-wordpress-theme/"
