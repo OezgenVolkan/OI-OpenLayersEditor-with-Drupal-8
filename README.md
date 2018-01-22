@@ -27,7 +27,7 @@ Als Software-Produkt soll mit Webtechnologien ein Editor entwickelt werden, mit 
 
 ### 2.2 Zielgruppe
 
-Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinformationen arbeiten. Genau gesehen kommen alle als Zielgruppe in Frage, die sich für die Erstellung oder Pflege von Karten interessieren. 
+Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinformationen arbeiten. Genau gesehen kommen alle als Zielgruppe in Frage, die sich für die Erstellung oder Pflege von Karten interessieren, beispielsweise Anwender und Entwickler, die eine Karte im Internet darstellen oder Kartenbasierte Anwendungen erstellen möchten.
 
 
 ## 3 Vorbereitung
@@ -93,8 +93,16 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
 ---
 
-##### Was ist OpenLayers:
-##### OpenLayers-Bibliothek einbinden:
+* ##### Was ist OpenLayers:
+   
+   OpenLayers ist eine JavaScript-Bibliothek, mit der Geodaten im Web-Browser angezeigt werden können. Sie ist in der Programmiersprache JavaScript geschrieben und ist unabhängig von der eingesetzten Serversoftware. Die Software stellt typische Webmapping-Elemente bereit, wie beispielsweise eine Skala zum verändern des dargestellten Maßstabs. OpenLayers wurde Jahrelang auf der Startseite von OpenStreetMap eingesetzt und wird unter anderem beim Schweizer Geoportal des Bundes verwendet.
+   
+* ##### OpenLayers-Bibliothek in WordPress einbinden:
+
+   Nachdem die WordPress Installation erfolgreich fertig gestellt ist, wird es Zeit OpenLayers in die WordPress Umgebung einzubinden. Dazu benötigen wir die Folgenden html script- und link-Tags:
+   
+   `<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+   <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>`
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
