@@ -70,7 +70,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    WordPress begrüßt uns und teilt uns mit, dass wir eine existierende Datenbanktabelle benötigen und ohne diese Informationen nicht fortfahren können. Da wir aber bei der XAMPP Konfiguration eine Datenbanktabelle angelegt haben, können wir auf den Button `Los geht´s!` klicken. Damit gelangen wir zur nächsten Seite, wie im Bild unten gezeigt.
    
-   ![alt text](http://praxistipps.s3.amazonaws.com/mac-os-x-wordpress-installieren_5468a697.jpg?58bf02de08e1a "WordPress Datenbank Informationen")
+   ![alt text](https://online-marketing-site.de/wp-content/uploads/wordpress-installieren-zugangsdaten.png "WordPress Datenbank Informationen")
    
    Hier geben wir die Folgenden Informationen ein:
    * **Datenbank Name**: `osmeditor`
@@ -78,7 +78,12 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    * **Passwort**: `leer lassen (bei XAMPP localhost standard)`
    * **Datenbank host**: `localhost`
    * **Tabellen-Präfix**: `wp_ (standard bei Wordpress)`
-
+   
+   Nachdem wir die nötigen Datenbank Informationen eingegeben haben, klicken wir auf senden und wenn alles gut läuft kommt die letzte Seite der Installation, wie unten zu sehen.
+   
+   ![alt text](https://www.perun.net/wp-content/uploads/2015/12/wordpress-installieren.png "WordPress Allgemeine Informationen")
+   
+   WordPress möchte nun, dass wir den `Titel` der Webseite eingeben, hier ist der Titel gleich des Verzeichnisses, also `OI-OpenLayersEditor-with-Wordpress`. `Benutzername`, `Passwort` und `E-Mail-Adresse` werden vom Nutzer ausgewählt und sind für den späteren Login im Backend-Bereich wichtig. 
 
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
 ##### OpenLayers-Bibliothek einbinden
