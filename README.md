@@ -11,6 +11,12 @@ Geodaten vorhanden sind.
 
 ### 1.2 Aufbau des Dokuments
 
+Die Dokumentation ist wie folgt gegliedert. Zunächst wird im Kapitel 2 das Produkt vorgestellt. Dabei
+wird die Produktvision näher erläutert sowie die Zielgruppe für das Produkt beschrieben. Das 3.
+Kapitel dient der Vorbereitung. Hier werden die verwendeten Webtechnologien und die
+Aufgaben der Software für das Produkt erläutert. Im 4. Kapitel wird die Realisierung dokumentiert. So
+wird beschrieben wie die Softwarelösung implementiert wird. 
+
 ## 2 Vorstellung des Produktes
 ### 2.1 Produktvision
 ### 2.2 Zielgruppe
