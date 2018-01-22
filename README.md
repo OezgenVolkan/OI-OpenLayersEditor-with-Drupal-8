@@ -20,7 +20,7 @@ wird beschrieben wie die Softwarelösung implementiert wird.
 ## 2 Vorstellung des Produktes
 ### 2.1 Produktvision
 
-Als Software-Produkt soll mit einer Webtechnologie ein Editor entwickelt werden, mit dem man Geodaten Visualisieren, erstellen und bearbeiten kann. Der Editor wird in ein Content Management System eingebettet und kann somit über ein Web-Browser bedient werden. Dafür soll als Zielprodukt ein erster funktionsfähiger Prototyp entstehen.
+Als Software-Produkt soll mit Webtechnologien ein Editor entwickelt werden, mit dem man Geodaten Visualisieren, erstellen und bearbeiten kann. Der Editor wird in ein Content Management System eingebettet und kann somit über ein Web-Browser bedient werden. Mit dem Editor soll es möglich sein, Punkte, Linien und Polygone auf einer OpenStreetMaps-Karte einzuzeichnen und mit Meta-Daten abzuspeichern. Zusätzlich soll es die Möglichkeit geben, nach beendigung der Zeichnung, die Punkte, Linien oder Polygone zu korrigieren .Dafür soll als Zielprodukt ein erster funktionsfähiger Prototyp entstehen.
 
 ### 2.2 Zielgruppe
 
