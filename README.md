@@ -105,6 +105,25 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
    <script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
    ```
+   
+   Diese liefern uns die OpenLayers JavaScript-Bibliothek und die zur darstellung nötige CSS-Datei. In dem aktuell aktiven WordPress Theme, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\[Theme_Name]`, werden in der `header.php` die zwei Zeilen von oben ergänzt.
+   
+   ```Html
+   <!DOCTYPE html>
+
+   <html class="no-js" <?php language_attributes(); ?>>
+
+	   <head profile="http://gmpg.org/xfn/11">
+		
+		   <meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
+		   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+ 
+		   <?php wp_head(); ?>
+	      
+	      <link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+         <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+         ...
+   ```
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
