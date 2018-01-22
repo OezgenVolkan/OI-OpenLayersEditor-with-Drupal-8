@@ -67,6 +67,10 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    Bevor wir die Anwendung aufsetzen können müssen wir es ersteinmal WordPress herunterladen. Unter dem Link https://de.wordpress.org/download/ können wir die Source-Dateien als Zip downloaden. Die Zip-Datei wird nun in das `htdocs/OI-OpenLayersEditor-with-Wordpress` Verzeichnis, welches in Kapitel **3.1.1 - XAMPP installieren und konfigurieren** erstellt wurde, entpackt. Als nächsten Schritt rufen wir die Adresse `http://localhost/OI-OpenLayersEditor-with-Wordpress` über ein Browser auf, es erscheint die Folgende Seite.
    
    ![alt text](http://homepageanleitung.de/wp-content/uploads/2015/07/wordpress-installieren.png "WordPress Begrüßung")
+   
+   WordPress begrüßt uns und teilt uns mit, dass wir eine existierende Datenbanktabelle benötigen und ohne diese Informationen nicht fortfahren können. Da wir aber bei der XAMPP Konfiguration eine Datenbanktabelle angelegt haben, können wir auf den Button `Los geht´s!` klicken. Damit gelangen wir zur nächsten Seite, wie im Bild unten gezeigt.
+   
+   ![alt text](https://www.affiliate-marketing-tipps.de/Bilder/wordpress-manuell.gif "WordPress Datenbank Informationen")
 
 
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
