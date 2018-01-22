@@ -1,6 +1,6 @@
 # OI-OpenLayersEditor-with-Wordpress
 
-Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an der HTW-Berlin entwickelt. Das Projekt verbindet OpenLayers mit Wordpress und bietet einen Editor für OpenStreetMaps. Mit dem Editor soll es möglich sein, Punkte, Linien und Polygone in die Karte einzuzeichnen und diese mit Meta-Daten abzuspeichern. Das Ergebnis des Projekts soll ein erster funktionsfähiger Prototyp sein.  
+Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an der HTW-Berlin entwickelt. Das Projekt verbindet OpenLayers mit WordPress und bietet einen Editor für OpenStreetMaps. Mit dem Editor soll es möglich sein, Punkte, Linien und Polygone in die Karte einzuzeichnen und diese mit Meta-Daten abzuspeichern. Das Ergebnis des Projekts soll ein erster funktionsfähiger Prototyp sein.  
 
 ## 1 Einführung
 ### 1.1 Gegenstand und zweck des Dokuments
@@ -28,8 +28,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 ## 3 Vorbereitung
 ### 3.1 Verwendetete Webtechnologien
-#### 3.1.1 Wordpress Installation
+#### 3.1.1 WordPress Installation
 
+WordPress
 https://de.wordpress.org/download/
 
 #### 3.1.2 OpenLayers JavaScript-Bibliothek einbinden
