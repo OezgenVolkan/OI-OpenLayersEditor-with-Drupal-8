@@ -33,6 +33,16 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 ### 3.1 Verwendetete Anwendungen und Bibliotheken
 #### 3.1.1 XAMPP
 
+* ##### Was ist XAMPP:
+
+   XAMPP ist ein Open-Source Programmpaket. Es ermöglicht das Installieren und Konfigurieren eines Apache Webservers mit MySQL, PHP und Perl. Die Software wendet sich hauptsächlich an Entwickler, die eine Entwicklungsumgebung mit Datenbankanbindung benötigen. Durch die Nutzung erhält der Entwickler einen lokalen Apache-Webserver.
+
+* ##### XAMPP installieren und Konfigurieren
+
+   XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel (Abbildung 1).
+   
+   ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 #### 3.1.2 WordPress
 
 * ##### Was ist WordPress:
