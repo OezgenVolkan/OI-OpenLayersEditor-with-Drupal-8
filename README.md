@@ -1,1 +1,1 @@
-# OI-OpenLayersEditor-with-Drupal-8 
+# OI-OpenLayersEditor-with-Wordpress
