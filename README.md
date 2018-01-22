@@ -71,6 +71,13 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    WordPress begrüßt uns und teilt uns mit, dass wir eine existierende Datenbanktabelle benötigen und ohne diese Informationen nicht fortfahren können. Da wir aber bei der XAMPP Konfiguration eine Datenbanktabelle angelegt haben, können wir auf den Button `Los geht´s!` klicken. Damit gelangen wir zur nächsten Seite, wie im Bild unten gezeigt.
    
    ![alt text](http://praxistipps.s3.amazonaws.com/mac-os-x-wordpress-installieren_5468a697.jpg?58bf02de08e1a "WordPress Datenbank Informationen")
+   
+   Hier geben wir die Folgenden Informationen ein:
+   * Datenbank Name    `osmeditor`
+   * Benutzername   `root (bei XAMPP localhost standard)`
+   * Passwort   `leer lassen (bei XAMPP localhost standard)`
+   * Datenbank host   `localhost`
+   * Tabellen-Präfix   `**wp_** (standard bei Wordpress)`
 
 
 #### 3.1.3 OpenLayers JavaScript-Bibliothek
