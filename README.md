@@ -4,6 +4,11 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 
 ## 1 Einführung
 ### 1.1 Gegenstand und zweck des Dokuments
+
+Dieses Dokument dient zur Dokumentation eines Projektes für das Modul „Ortsbasierte Informationssysteme“. Die Dokumentation beschreibt hierbei die Entwicklung einer Software. Das Dokument richtet sich dabei an den Entwickler, der sich für die Visualisierung von Geodaten und die Entwicklung von Editoren interessiert und es wird
+davon ausgegangen, dass grundlegende Kenntnisse in der Softwareentwicklung sowie im Umgang mit
+Geodaten vorhanden sind.
+
 ### 1.2 Aufbau des Dokuments
 
 ## 2 Vorstellung des Produktes
