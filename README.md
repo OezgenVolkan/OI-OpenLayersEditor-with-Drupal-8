@@ -24,6 +24,8 @@ Als Software-Produkt soll mit Webtechnologien ein Editor entwickelt werden, mit 
 
 ### 2.2 Zielgruppe
 
+Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinformationen arbeiten. Genau gesehen kommen alle als Zielgruppe in Frage, die sich für die Erstellung oder Pflege von Karten interessieren. 
+
 ## 3 Vorbereitung
 ### 3.1 Verwendetete Webtechnologien
 #### 3.1.1 Wordpress Installation
