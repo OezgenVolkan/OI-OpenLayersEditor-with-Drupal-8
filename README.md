@@ -19,6 +19,9 @@ wird beschrieben wie die Softwarelösung implementiert wird.
 
 ## 2 Vorstellung des Produktes
 ### 2.1 Produktvision
+
+Als Software-Produkt soll mit einer Webtechnologie ein Editor entwickelt werden, mit dem man Geodaten Visualisieren, erstellen und bearbeiten kann. Der Editor wird in ein Content Management System eingebettet und kann somit über ein Web-Browser bedient werden. Dafür soll als Zielprodukt ein erster funktionsfähiger Prototyp entstehen.
+
 ### 2.2 Zielgruppe
 
 ## 3 Vorbereitung
