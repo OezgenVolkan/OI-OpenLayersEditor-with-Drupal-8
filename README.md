@@ -54,7 +54,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    ![alt text](https://upload.wikimedia.org/wikipedia/commons/0/06/Screenshot-127.0.0.1_-_localhost_phpMyAdmin_3.3.2deb1ubuntu1_-_Chromium.png "phpMyAdmin")
    
-   Über phpMyAdmin kann man Datenbanktabellen anlegen und bearbeiten. Wir möchten eine Datenbanktabelle anlegen, dazu klicken wir links in der Navigation auf den ersten Eintrag mit der Bezeichnung `Neu`. Hier vergeben wir lediglich den Namen der Tabelle, hier `osmeditor` (Wichtig für die Folgende WordPress Installation).
+   Über phpMyAdmin kann man Datenbanktabellen anlegen und bearbeiten. Wir möchten eine Datenbanktabelle anlegen, dazu klicken wir links in der Navigation auf den ersten Eintrag mit der Bezeichnung `Neu`. Hier vergeben wir lediglich den Namen der Tabelle, hier `osmeditor` **(Wichtig für die Folgende WordPress Installation)**.
 
 #### 3.1.2 WordPress
 
