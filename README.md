@@ -23,6 +23,8 @@ wird beschrieben wie die Softwarelösung implementiert wird.
 
 ## 3 Vorbereitung
 ### 3.1 Verwendetete Webtechnologien
+#### 3.1.1 Wordpress Installation
+#### 3.1.2 OpenLayers einbinden
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
