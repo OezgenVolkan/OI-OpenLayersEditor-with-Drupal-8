@@ -125,7 +125,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 	 ...
    ```
    
-   Nach Implementierung der zwei Zeilen ist OpenLayers einsatzbereit.
+   Nach Implementierung der zwei Zeilen in die `header.php` Datei ist OpenLayers nun einsatzbereit.
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
