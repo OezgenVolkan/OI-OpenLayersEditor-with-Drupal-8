@@ -120,7 +120,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		<?php wp_head(); ?>
 	      
 	      	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
-         	<script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+         	<script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
          ...
 	 ...
    ```
