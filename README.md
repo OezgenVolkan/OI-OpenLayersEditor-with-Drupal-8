@@ -46,7 +46,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    ![alt text](http://teampasswordmanager.com/assets/img/site/docs/xampp_control_panel_2015.png "XAMPP Control Panel")
    
-   Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt. Durch diesen Schritt wurde ein vollfunktionsfähiger lokaler Webserver mit MySQL-Datenbank Anbindung aufgesetzt. Nun kann man über einen Web-Browser unter der Adresse `http://localhost/` auf den lokalen Webserver zugreifen.
+   Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt, wie oben zu sehen. Durch diesen Schritt wurde ein vollfunktionsfähiger lokaler Webserver mit MySQL-Datenbank Anbindung aufgesetzt. Nun kann man über einen Web-Browser unter der Adresse `http://localhost/` auf den lokalen Webserver zugreifen.
    
    Durch die Installation von XAMPP wurden am gewünschten Installationsort unter dem Ordner `XAMPP` mehrere Verzeichnisse und Dateien abgelegt. Für dieses Projekt ist das Verzeichnis `htdocs` von Bedeutung. Dies ist der öffentliche Ordner, wo die Source-Dateien der Webanwendungen gespeichert werden und über die Adresse `http://localhost/[Name_Webanwendung]` durch einen Web-Browser abrufbar sind. In dieses Verzeichnis wird auch dieses Projekt gespeichert und ist somit über `http://localhost/OI-OpenLayersEditor-with-WordPress` erreichbar. 
 
