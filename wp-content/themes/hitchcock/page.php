@@ -24,7 +24,7 @@
 			<?php endif; ?>
 			
 			<div class="post-header">
-												
+				
 				<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 			
 			</div>

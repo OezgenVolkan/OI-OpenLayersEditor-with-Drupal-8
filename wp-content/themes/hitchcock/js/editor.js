@@ -95,22 +95,56 @@ jQuery(document).on('ready', function()
 	 *================================================================
 	 */
 
+	/**
+	 * Elements that make up the popup.
+	 */
+	var container = document.getElementById('popup');
+	var content = document.getElementById('popup-content');
+	var closer = document.getElementById('popup-closer');
+
+
+	/**
+	* Create an overlay to anchor the popup to the map.
+	*/
+	var overlay = new ol.Overlay(
+	{
+		element: container,
+		autoPan: true,
+		autoPanAnimation: 
+		{
+	  		duration: 250
+		}
+	});
+
+	/**
+	 * Add a click handler to hide the popup.
+	 * @return {boolean} Don't follow the href.
+	 */
+	closer.onclick = function() 
+	{
+		// overlay.setPosition(undefined);
+		// closer.blur();
+		clearMap();
+		return false;
+	};
+
+
 	// create a vector layer used for editing
 	var vector_layer = new ol.layer.Vector(
 	{
-  		name: 'my_vectorlayer',
+  		name: 'vectorlayer_for_editing',
   		source: new ol.source.Vector(),
   		style: new ol.style.Style(
   		{
 	    	fill: new ol.style.Fill(
 	    	{
-	      		color: 'rgba(255, 255, 255, 0.2)'
+	      		color: 'rgba(106, 255, 0, 0.2)'
 	    	}),
 	    
 	    	stroke: new ol.style.Stroke(
 	    	{
-	      		color: '#ffcc33',
-	      		width: 2
+	      		color: '#6aff00',
+	      		width: 4
 	    	}),
 	    	
 	    	image: new ol.style.Circle(
@@ -118,10 +152,15 @@ jQuery(document).on('ready', function()
 	      		radius: 7,
 	      		fill: new ol.style.Fill(
 	      		{
-	        		color: '#ffcc33'
+	        		color: '#6aff00'
 	      		})
 	    	})
   		})
+	});
+
+	var osmLayer = new ol.layer.Tile(
+	{
+  		source: new ol.source.OSM()
 	});
 
   	var berlin = ol.proj.transform([13.40495, 52.52001], 'EPSG:4326', 'EPSG:3857');
@@ -129,56 +168,17 @@ jQuery(document).on('ready', function()
   	var view = new ol.View(
   	{
         center: berlin,
-        zoom: 12
+        zoom: 17
     });
 
 	// Create a map
 	var map = new ol.Map(
 	{
   		target: 'map',
-	  	layers: [
-	    	new ol.layer.Tile(
-	    	{
-	      		source: new ol.source.OSM()
-	    	}),
-    		vector_layer
-  		],
+	  	layers: [osmLayer, vector_layer],
+  		overlays: [overlay],
   		view: view
 	});
-
-	// // create an Overlay using the div with id location.
- //    var marker = new ol.Overlay(
- //    {
- //    	element: document.getElementById('location'),
- //        positioning: 'bottom-left',
- //        stopEvent: false
- //  	});
-
- //  	// add it to the map
- //    map.addOverlay(marker);
-
- //    // create a Geolocation object setup to track the position of the device
-	// var geolocation = new ol.Geolocation(
-	// {
-	// 	tracking: true
-	// });
-
-	// // bind the projection to the View so that positions are reported in the
-	// // projection of the view
-	// // geolocation.bindTo('projection', view);
-
-	// // bind the marker's position to the geolocation object, the marker will
-	// // move automatically when the GeoLocation API provides position updates
-	// // marker.bindTo('position', geolocation);
-
-	// // when the GeoLocation API provides a position update, center the view
-	// // on the new position
-	// geolocation.on('change:position', function() 
-	// {
-	// 	var p = geolocation.getPosition();
-	// 	console.log(p[0] + ' : ' + p[1]);
-	// 	view.setCenter([parseFloat(p[0]), parseFloat(p[1])]);
-	// });
 
 	// make interactions global so they can later be removed
 	var select_interaction, draw_interaction, modify_interaction;
@@ -206,6 +206,7 @@ jQuery(document).on('ready', function()
 	// rebuild interaction when the geometry type is changed
 	$geom_type.on('change', function(e) 
 	{
+		clearMap();
   		map.removeInteraction(draw_interaction);
   		addDrawInteraction();
 	});
@@ -214,12 +215,12 @@ jQuery(document).on('ready', function()
 	$data_type = jQuery('#data_type');
 	
 	// clear map and rebuild interaction when changed
-	$data_type.onchange = function() 
+	$data_type.on('change', function() 
 	{
   		clearMap();
   		map.removeInteraction(draw_interaction);
   		addDrawInteraction();
-	};
+	});
 
 	// build up modify interaction
 	// needs a select and a modify interaction working together
@@ -234,7 +235,7 @@ jQuery(document).on('ready', function()
     		// make sure only the desired layer can be selected
 	    	layers: function(vector_layer) 
 	    	{
-	      		return vector_layer.get('name') === 'my_vectorlayer';
+	      		return vector_layer.get('name') === 'vectorlayer_for_editing';
 	    	}
   		});
 
@@ -251,42 +252,6 @@ jQuery(document).on('ready', function()
 		    
 		    // ...listen for changes and save them
 		    feature.on('change', saveData);
-		    
-		    // listen to pressing of delete key, then delete selected features
-		    jQuery(document).on('keyup', function(event) 
-		    {
-		    	if (event.keyCode == 46) 
-		    	{
-		        	// remove all selected features from select_interaction and my_vectorlayer
-		        	selected_features.forEach(function(selected_feature) 
-		        	{
-		        		var selected_feature_id = selected_feature.getId();
-		          
-		          		// remove from select_interaction
-		          		selected_features.remove(selected_feature);
-		          		
-		          		// features aus vectorlayer entfernen
-		          		var vectorlayer_features = vector_layer.getSource().getFeatures();
-		          		
-		          		vectorlayer_features.forEach(function(source_feature) 
-		          		{
-		            		var source_feature_id = source_feature.getId();
-		            		
-		            		if (source_feature_id === selected_feature_id) 
-		            		{
-		              			// remove from my_vectorlayer
-		              			vector_layer.getSource().removeFeature(source_feature);
-		              
-		              			// save the changed data
-		              			saveData();
-		            		}
-		          		});
-		        	});
-		        
-		        	// remove listener
-		        	jQuery(document).off('keyup');
-		      	}
-		    });
 	  	});
 
 	  	// create the modify interaction
@@ -325,6 +290,17 @@ jQuery(document).on('ready', function()
   		// when a new feature has been drawn...
   		draw_interaction.on('drawend', function(event) 
   		{
+  			console.log('#object-type-radio-' + $geom_type.val());
+  			jQuery('#object-type-radio-' + $geom_type.val()).show();
+    		osmLayer.setOpacity(0.2);
+    		// jQuery('#myModal').modal('toggle')
+
+    		var coordinate = event.feature.getGeometry().getLastCoordinate();
+	        // var hdms = ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'));
+
+	        // content.innerHTML = '<p>You clicked here:</p><code>' + hdms + '</code>';
+	        overlay.setPosition('bottom-left');
+
     		// create a unique id
     		// it is later needed to delete features
     		var id = uid();
@@ -332,17 +308,30 @@ jQuery(document).on('ready', function()
     		// give the feature this id
     		event.feature.setId(id);
 
+
+    		/**
+    		 * ***************** Debug only ****************
+    		 */
+
+    		 	var currentFeat = event.feature;
+    		 	var restOfFeat 	= vector_layer.getSource().getFeatures();
+    		 	var allFeat		= restOfFeat.concat(currentFeat);
+
+    		 /**
+    		 * *********************************************
+    		 */
+
     		// save the changed data
-    		saveData(); 
+    		saveData(allFeat);
   		});
 	}
 
 	// add the draw interaction when the page is first shown
-	addDrawInteraction();
+	// addDrawInteraction();
 
 	// shows data in textarea
 	// replace this function by what you need
-	function saveData() 
+	function saveData(feature) 
 	{
   		// get the format the user has chosen
   		var data_type = $data_type.val(),
@@ -353,17 +342,8 @@ jQuery(document).on('ready', function()
       	// this will be the data in the chosen format
  		data;
 
-  		try 
-  		{
-    		// convert the data of the vector_layer into the chosen format
-    		data = format.writeFeatures(vector_layer.getSource().getFeatures());
-  		} 
-  		catch (e) 
-  		{
-    		// at time of creation there is an error in the GPX format (18.7.2014)
-    		jQuery('#data').val(e.name + ": " + e.message);
-    		return;
-  		}
+		// convert the data of the vector_layer into the chosen format
+		data = format.writeFeatures(feature);
   
   		if ($data_type.val() === 'GeoJSON') 
   		{
@@ -372,6 +352,8 @@ jQuery(document).on('ready', function()
   		} 
   		else 
   		{
+  			console.log(data);
+  			console.log(feature);
     		// format is XML (GPX or KML)
     		var serializer = new XMLSerializer();
     		jQuery('#data').val(serializer.serializeToString(data));
@@ -387,6 +369,10 @@ jQuery(document).on('ready', function()
 	// clears the map and the output of the data
 	function clearMap() 
 	{
+		jQuery('#object-type-radio-Point').hide();
+		jQuery('#object-type-radio-LineString').hide();
+		jQuery('#object-type-radio-Polygon').hide();
+		osmLayer.setOpacity(1);
   		vector_layer.getSource().clear();
   
   		if (select_interaction) 
@@ -395,6 +381,9 @@ jQuery(document).on('ready', function()
   		}
 
   		jQuery('#data').val('');
+
+  		overlay.setPosition(undefined);
+		closer.blur();
 	}
 
 	// creates unique id's

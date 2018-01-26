@@ -90,11 +90,15 @@ html { font-size: 16px; }
 body {
 	margin: 0;
 	padding: 0;
-	background: #1d1d1d;
+	background-color: #1d1d1d !important;
 	border: none;
 	color: #1d1d1d;
 	font-family: 'Montserrat', 'Helvetica Neue', 'Helvetica', sans-serif;
 	-webkit-text-size-adjust: 100%;
+	/*background-image: url(http://localhost/osmeditor.com/wp-content/uploads/2018/01/cropped-ETp0mJ.jpg);*/
+	background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 body a {
@@ -150,10 +154,224 @@ img {
 	z-index: 2;
 }
 
+/*==================== Custom CSS =============================*/
 
 #geometry_type {
 	margin:15px 0;
 }
+
+#editor-wrapper {
+	background:#1D1D1D;
+	padding:25px 25px;
+}
+
+.editor-right-section {
+	padding-top:25px;
+	position:relative;
+	border:1px solid #272727;
+}
+
+.editor-bottom-section {
+	margin-top:15px;
+}
+
+.editor-bottom-section textarea {
+	margin-top:15px;
+}
+
+.editor-label img {
+	float:left;
+}
+
+.editor-label p {
+	float:left;
+	margin-left:5px;
+	color:#c7c7c7;
+	text-transform:uppercase;
+	font-size:18px;
+	height:50px;
+	padding:15px 0;
+}
+
+.editor-label .data-label {
+	float:left;
+	margin-left:15px;
+	color:#c7c7c7;
+	text-transform:uppercase;
+	font-size:18px;
+	height:30px;
+	padding:0;
+}
+
+.editor-content {
+	text-align:right;
+	margin-bottom:45px !important;
+}
+
+.editor-content label {
+	padding-left:45px;
+	padding-right:10px;
+	font-weight:bold;
+}
+
+.editor-content select {
+	width:100%;
+	padding:5px;
+	margin-top:15px;
+}
+
+.editor-content hr {
+	background:#272727 !important;
+}
+
+.editor-content input[type="radio"] {
+	transform:scale(2);
+	cursor:pointer;
+}
+
+.editor-right-section button {#
+	position:relative;
+	bottom:0;
+}
+
+.btn {
+	font-size:2rem !important;
+}
+
+.editor-popup-content small {
+	margin-top:10px;
+}
+
+.editor-popup-content #object-type-select {
+	width:100%;
+	padding:10px;
+}
+
+.editor-popup-content hr {
+	background:#272727 !important;
+	margin:25px 0 !important;
+}
+
+.editor-popup-content input[type="text"] {
+	padding:10px 5px !important;
+	border:2px solid #c7c7c7 !important;
+}
+
+.editor-popup-content .top-line {
+	background:#272727 !important;
+	margin:10px 0 !important;
+}
+
+.editor-popup-content .editor-popup-label {
+	margin:10px 0;
+}
+
+.editor-popup-content .editor-popup-label img {
+	float:left;
+}
+
+.editor-popup-content .editor-popup-label label {
+	float:left;
+	padding:10px;
+}
+
+.object-type-radio-content {
+	display:none;
+	background:#fff;
+	padding:20px;
+	padding-top:35px;
+}
+
+.object-type-radio-content .object-type-radio{
+	float:left;
+	margin-right:10px;
+	margin-bottom:25px;
+	width:160px;
+}
+
+.object-type-radio-content .object-type-radio input[type="radio"]{
+	transform:scale(1.5);
+	display:block;
+	float:left;
+	margin-right:10px;
+	cursor:pointer;
+}
+
+.object-type-radio-content .object-type-radio .object-type-radio-label img {
+	float:left;
+}
+
+.object-type-radio-content .object-type-radio .object-type-radio-label p {
+	float:left;
+	padding:5px;
+	color:#1d1d1d;
+	font-size:12px;
+}
+
+.object-type-radio-content .object-type-radio .object-type-radio-label {
+	margin-top:-10px;
+	float:left;
+	cursor:pointer;
+}
+
+#map {
+	border:1px solid #272727;
+}
+
+.ol-popup {
+	position: absolute;
+	background-color: #1D1D1D;
+	-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+	filter: drop-shadow(0 0 10px rgba(0,0,0,0.7));
+	padding: 15px;
+	/*border-radius: 2px;*/
+	/*border: 1px solid #cccccc;*/
+	bottom: 0;
+	/*left: -50px;*/
+	min-width: 420px;
+	color:#c7c7c7;
+	padding-right:25px;
+}
+
+.ol-popup:after, .ol-popup:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.ol-popup:after {
+	/*border-top-color: #1D1D1D;
+	border-width: 10px;
+	left: 48px;
+	margin-left: -10px;*/
+}
+
+.ol-popup:before {
+	border-top-color: #cccccc;
+	border-width: 11px;
+	left: 48px;
+	margin-left: -11px;
+}
+
+.ol-popup-closer {
+	text-decoration: none;
+	position: absolute;
+	top: 2px;
+	right: 8px;
+}
+      
+.ol-popup-closer:after {
+	color:#c7c7c7;
+	content: "✖";
+}
+
+/*=============================================================*/
+
+
 
 /* Transitions --------------------------------------- */
 
@@ -214,7 +432,10 @@ input[type="button"],
 
 .navigation { background: #1d1d1d; }
 
-.main-menu { text-align: center; }
+.main-menu { 
+	text-align: center; 
+	margin-bottom:0;
+}
 
 .main-menu li { position: relative; }
 
@@ -435,7 +656,7 @@ input[type="button"],
 /* -------------------------------------------------------------------------------- */
 
 
-.header { padding: 70px 0; }
+.header { padding: 20px 0; }
 
 .header.section-inner { 
 	width: 325px; 
@@ -549,19 +770,19 @@ input[type="button"],
 
 .header-image,
 .header-image:after {
-	height: 900px;
+	/*height: 900px;
 	height: 100vh;
 	position: absolute;
 	z-index: 1;
 	right: 0;
-	left: 0;
+	left: 0;*/
 }
 
 .header-image {
-	background-image: url(images/bg.jpg);
+	/*background-image: url(images/bg.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover;
+	background-size: cover;*/
 }
 
 .header-image:after { 
@@ -719,7 +940,7 @@ input[type="button"],
 .post-header { 
 	width: 90%;
 	margin: 0 auto;
-	padding: 80px 0;
+	padding: 40px 0 20px;
 }
 
 .post-date {
@@ -734,8 +955,9 @@ input[type="button"],
 	font-size: 2.5em;
 	line-height: 120%;
 	font-weight: 700;
-	text-align: center;
+	text-align: left;
 	text-transform: uppercase;
+	margin-bottom:0;
 }
 
 
@@ -968,7 +1190,7 @@ input[type="button"],
 
 
 .post-content { 
-	font-family: 'Droid Serif', Georgia, serif; 
+	/*font-family: 'Droid Serif', Georgia, serif; */
 	color: #333;
 	position: relative;
 }
@@ -1829,6 +2051,7 @@ p.comment-form-author { margin-right: 5%; }
 	padding: 60px 0; 
 	position: relative;
 	z-index: 2;
+	background:#1D1D1D;
 }
 
 .credits p {
@@ -1954,7 +2177,10 @@ img#wpstats {
 	/* Navigation --------------------------------------- */
 	
 	
-	.main-menu { display: none; }
+	.main-menu { 
+		display: none;
+		margin-bottom:0 !IMPORTANT;
+	}
 	
 	.mobile-menu { 
 		border-top: 1px solid #2d2d2d; 
