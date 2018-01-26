@@ -44,9 +44,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
    XAMPP ist unter dem Link https://www.apachefriends.org/de/download.html herunterladbar. Nachdem die Software heruntergeladen und installiert wurde, muss die Anwendung gestartet werden. Nachdem Start öffnet sich das XAMPP Control Panel, wie unten im Bild zu sehen.
    
-   ![alt text](https://a.fsdn.com/con/app/proj/xampp/screenshots/Screen%20Shot%202016-02-19%20at%2016.png/1 "XAMPP Control Panel")
+   ![alt text](http://teampasswordmanager.com/assets/img/site/docs/xampp_control_panel_2015.png "XAMPP Control Panel")
    
-   Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt. Durch diesen Schritt wurde ein vollfunktionsfähiger lokaler Webserver mit MySQL-Datenbank Anbindung aufgesetzt. Nun kann man über einen Web-Browser unter der Adresse `http://localhost/` auf den lokalen Webserver zugreifen.
+   Die Module Apache und MySQL müssen über einen Klick auf den Start-Button gestartet werden. Wenn dies erfolgreich gewesen ist, sind die Modulnamen grün hinterlegt, wie oben zu sehen. Durch diesen Schritt wurde ein vollfunktionsfähiger lokaler Webserver mit MySQL-Datenbank Anbindung aufgesetzt. Nun kann man über einen Web-Browser unter der Adresse `http://localhost/` auf den lokalen Webserver zugreifen.
    
    Durch die Installation von XAMPP wurden am gewünschten Installationsort unter dem Ordner `XAMPP` mehrere Verzeichnisse und Dateien abgelegt. Für dieses Projekt ist das Verzeichnis `htdocs` von Bedeutung. Dies ist der öffentliche Ordner, wo die Source-Dateien der Webanwendungen gespeichert werden und über die Adresse `http://localhost/[Name_Webanwendung]` durch einen Web-Browser abrufbar sind. In dieses Verzeichnis wird auch dieses Projekt gespeichert und ist somit über `http://localhost/OI-OpenLayersEditor-with-WordPress` erreichbar. 
 
@@ -120,10 +120,12 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		<?php wp_head(); ?>
 	      
 	      	<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
-         	<script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script>
+         	<script src="https://openlayers.org/en/v4.6.4/build/ol.js" type="text/javascript"></script>
          ...
 	 ...
    ```
+   
+   Nach Implementierung der zwei Zeilen in die `header.php` Datei ist OpenLayers nun einsatzbereit.
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
