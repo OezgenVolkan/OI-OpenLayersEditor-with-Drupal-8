@@ -132,6 +132,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 ---
 #### 4.1.1 Die Map erstellen
 ---
+
+* ##### 4.1.1.a Karte in <div>-Container Einbinden
+   ---
 * ##### Der HTML-Code
    
    In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
