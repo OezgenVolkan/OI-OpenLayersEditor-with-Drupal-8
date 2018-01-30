@@ -480,7 +480,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		}
    ```
 
-
+---
 ## 5 Ergebnis
 
 Das Ergebnis ist ein erster Prototyp, mit dem man `Punkte`, `Linien` und `Polygone` Zeichnen und im nachhinein modifizieren kann. Die Daten zu den eingezeichneten Geometrien werden je nach gewähltem Datentyp in dem Datenfenster angezeigt, diese werden im Moment nicht persistiert. Auch die zusätzlichen Angaben, wie `Object Type` und `Object Name` werden nicht in die Daten mit aufgenommen, diese Funktionalität muss nachgerüstet werden. Im folgenden sind ein Paar Screenshots vom Editor.
@@ -548,7 +548,7 @@ In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion ein Polygon
 * **OBJECT NAME**: `Eigenname des Objekts`
 
 ---
-### 5.5 Daten ausgeben
+### 5.5 Die Datenausgabe
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_data.PNG "WordPress allgemeine Informationen")
 
