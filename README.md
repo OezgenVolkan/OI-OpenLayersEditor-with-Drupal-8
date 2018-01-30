@@ -19,7 +19,7 @@ Kapitel dient der Vorbereitung. Hier werden die verwendeten Anwendungen und Bibl
 Aufgaben der Software für das Produkt erläutert. Im 4. Kapitel wird die Realisierung dokumentiert. So
 wird beschrieben wie die Softwarelösung implementiert wird. 
 
-
+---
 ## 2 Vorstellung des Produktes
 ### 2.1 Produktvision
 
@@ -29,7 +29,7 @@ Als Software-Produkt soll mit Webtechnologien ein Editor entwickelt werden, mit 
 
 Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinformationen arbeiten. Genau gesehen kommen alle als Zielgruppe in Frage, die sich für die Erstellung oder Pflege von Karten interessieren, beispielsweise Anwender und Entwickler, die eine Karte im Internet darstellen oder Kartenbasierte Anwendungen erstellen möchten.
 
-
+---
 ## 3 Vorbereitung
 ### 3.1 Verwendete Anwendungen und Bibliotheken
 
@@ -127,6 +127,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    Nach Implementierung der zwei Zeilen in die `header.php` Datei ist OpenLayers nun einsatzbereit.
 
+---
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
 ---
@@ -404,7 +405,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		}
    ```
    
-   Die outputData Funktion
+   Die saveData() Funktion
    ```javascript
 		function saveData(feature) 
 		{
