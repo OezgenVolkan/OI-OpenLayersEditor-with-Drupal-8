@@ -209,6 +209,39 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
       * **source**: `Die Source of Features (new ol.source.Vector())`
       * **style**: `Der Style der gezeichneten Geometrien`
       
+      Wir möchten, dass nach Abschluss einer Interaktion (Geometrie zeichnen), sich ein Popup Fenster öffnet, in die wir zusätzliche Informationen eingeben können. Dies tut der folgende Code:
+      
+      **HTML-Code:**
+      ```html 
+		<div id="popup" class="ol-popup">
+		<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+		<div id="popup-content" class="editor-popup-content">
+      ```
+      Es werden in der `page-editor.php`-Datei die für das Popup-Fenster notwendigen `<div>`-Container angelegt. Der folgende JavaScript-Code arbeitet mit diesen `<div>`-Containern.
+      
+      **JavaScript-Code:**
+      ```javascript
+		var container = document.getElementById('popup');
+		var content = document.getElementById('popup-content');
+		var closer = document.getElementById('popup-closer');
+		
+		var overlay = new ol.Overlay(
+		{
+			element: container,
+			autoPan: true,
+			autoPanAnimation: 
+			{
+				duration: 250
+			}
+		});
+		
+		closer.onclick = function() 
+		{
+			clearMap();
+			return false;
+		};
+      ```
+      
       Da wir alle benötigten Variablen erstellt haben, können wir nun die Kernkomponente implementieren. Die `ol.Map()` sieht folgendermaßen aus:
       
       ```javascript
