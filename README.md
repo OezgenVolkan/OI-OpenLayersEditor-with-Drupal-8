@@ -150,6 +150,61 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
       Der JavaScript sieht wie folgt aus:
       
       ```javascript
+		var osmLayer = new ol.layer.Tile(
+		{
+			source: new ol.source.OSM()
+		});
+      ```
+      
+      Zunächst legen wir eine Variable mit dem Namen `osmLayer` an und weisen dieser eine Tile-Layer, mit der source `ol.source.OSM()` zu. Als nächstes benötigen wir eine `ol.View`.
+      
+      ```javascript
+		var berlin = ol.proj.transform([13.40495, 52.52001], 'EPSG:4326', 'EPSG:3857');
+
+		var view = new ol.View(
+		{
+			center: berlin,
+			zoom: 17
+		});
+      ```
+      
+      Wir legen mit `var view = new ol.View` eine neue View an. Mit den Properties `**center**` und `**zoom**` werden die Startkoordinaten und Zoomfaktor eingestellt. Hier:
+      * **center**: `berlin (Koordinaten von Berlin)`
+      * **zoom**: `17`
+      
+      Da dies ein Editor ist, benötigen wir eine Schicht, auf die der Nutzer mit der Karte interagieren kann, der folgende Code legt so eine Vector-Schicht an:
+      
+      ```javascript
+		var vector_layer = new ol.layer.Vector(
+		{
+			name: 'vectorlayer_for_editing',
+			source: new ol.source.Vector(),
+			style: new ol.style.Style(
+			{
+				fill: new ol.style.Fill(
+				{
+					color: 'rgba(106, 255, 0, 0.2)'
+				}),
+
+				stroke: new ol.style.Stroke(
+				{
+					color: '#6aff00',
+					width: 4
+				}),
+
+				image: new ol.style.Circle(
+				{
+					radius: 7,
+					fill: new ol.style.Fill(
+					{
+						color: '#6aff00'
+					})
+				})
+			})
+		});
+      ```
+      
+      ```javascript
 		var map = new ol.Map(
 		{
 			target: 'map',
