@@ -130,35 +130,33 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
 ---
-#### 4.1.1 Die Map erstellen
+#### 4.1.1 Die Map und die nötigen Komponenten erstellen 
 ---
 
-   ##### 4.1.1.1 Die OSM-Karte einbinden
-
-   * ##### Der HTML-Code
+* ##### Der HTML-Code
    
-      In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
+   In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
    
-      ```Html 
+   ```Html 
 		<div id="map" class="map"></div> 
-      ```
+   ```
    
-      In dem ``<div>``-Container wird die Karte gerendert und angezeigt
+   In dem ``<div>``-Container wird die Karte gerendert und angezeigt
    
-   * ##### Der JavaScript-Code
+* ##### Der JavaScript-Code
 
-      Der JavaScript sieht wie folgt aus:
+   Der JavaScript-Code sieht wie folgt aus:
       
-      ```javascript
+   ```javascript
 		var osmLayer = new ol.layer.Tile(
 		{
 			source: new ol.source.OSM()
 		});
-      ```
+   ```
       
-      Zunächst legen wir eine Variable mit dem Namen `osmLayer` an und weisen dieser eine Tile-Layer, mit der source `ol.source.OSM()` zu. Als nächstes benötigen wir eine `ol.View`.
+   Zunächst legen wir eine Variable mit dem Namen `osmLayer` an und weisen dieser eine Tile-Layer, mit der source `ol.source.OSM()` zu. Als nächstes benötigen wir eine `ol.View`.
       
-      ```javascript
+   ```javascript
 		var berlin = ol.proj.transform([13.40495, 52.52001], 'EPSG:4326', 'EPSG:3857');
 
 		var view = new ol.View(
@@ -166,15 +164,15 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 			center: berlin,
 			zoom: 17
 		});
-      ```
+   ```
       
-      Wir legen mit `var view = new ol.View` eine neue View an. Mit den Properties **center** und **zoom** werden die Startkoordinaten und Zoomfaktor eingestellt. Hier:
-      * **center**: `berlin (Koordinaten von Berlin)`
-      * **zoom**: `17`
+   Wir legen mit `var view = new ol.View` eine neue View an. Mit den Properties **center** und **zoom** werden die Startkoordinaten und Zoomfaktor eingestellt. Hier:
+   * **center**: `berlin (Koordinaten von Berlin)`
+   * **zoom**: `17`
       
-      Da dies ein Editor ist, benötigen wir eine Schicht, auf die der Nutzer mit der Karte interagieren kann, der folgende Code legt so eine Vector-Schicht an:
+   Da dies ein Editor ist, benötigen wir eine Schicht, auf die der Nutzer mit der Karte interagieren kann, der folgende Code legt so eine Vector-Schicht an:
       
-      ```javascript
+   ```javascript
 		var vector_layer = new ol.layer.Vector(
 		{
 			name: 'vectorlayer_for_editing',
@@ -202,25 +200,25 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 				})
 			})
 		});
-      ```
+   ```
       
-      Der Vector-Schicht werden die folgenden Properties zugewiesen:
-      * **name**: `name des Vectors (vector_layer_for_editing)`
-      * **source**: `Die Source of Features (new ol.source.Vector())`
-      * **style**: `Der Style der gezeichneten Geometrien`
+   Der Vector-Schicht werden die folgenden Properties zugewiesen:
+   * **name**: `name des Vectors (vector_layer_for_editing)`
+   * **source**: `Die Source of Features (new ol.source.Vector())`
+   * **style**: `Der Style der gezeichneten Geometrien`
       
-      Wir möchten, dass nach Abschluss einer Interaktion (Geometrie zeichnen), sich ein Popup Fenster öffnet, in die wir zusätzliche Informationen eingeben können. Dies tut der folgende Code:
+   Wir möchten, dass nach Abschluss einer Interaktion (Geometrie zeichnen), sich ein Popup Fenster öffnet, in die wir zusätzliche Informationen eingeben können. Dies tut der folgende Code:
       
-      **HTML-Code:**
-      ```html 
+   **HTML-Code:**
+   ```html 
 		<div id="popup" class="ol-popup">
 		<a href="#" id="popup-closer" class="ol-popup-closer"></a>
 		<div id="popup-content" class="editor-popup-content">
-      ```
-      Es werden in der `page-editor.php`-Datei die für das Popup-Fenster notwendigen `<div>`-Container angelegt. Der folgende JavaScript-Code arbeitet mit diesen `<div>`-Containern.
+   ```
+   Es werden in der `page-editor.php`-Datei die für das Popup-Fenster notwendigen `<div>`-Container angelegt. Der folgende JavaScript-Code arbeitet mit diesen `<div>`-Containern.
       
-      **JavaScript-Code:**
-      ```javascript
+   **JavaScript-Code:**
+   ```javascript
 		var container = document.getElementById('popup');
 		var content = document.getElementById('popup-content');
 		var closer = document.getElementById('popup-closer');
@@ -240,11 +238,11 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 			clearMap();
 			return false;
 		};
-      ```
+   ```
       
-      Da wir alle benötigten Variablen erstellt haben, können wir nun die Kernkomponente implementieren. Die `ol.Map()` sieht folgendermaßen aus:
+   Da wir alle benötigten Komponenten erstellt haben, können wir nun die Kernkomponente implementieren. Die `ol.Map()` sieht folgendermaßen aus:
       
-      ```javascript
+   ```javascript
 		var map = new ol.Map(
 		{
 			target: 'map',
@@ -252,12 +250,12 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 			overlays: [overlay],
 			view: view
 		});
-      ```
+   ```
       
-      Mit `var map = new ol.Map()` legen wir eine neue Karteninstanz an und weisen sie der Variable `map` zu. Im folgenden werden die einzelnen Properties erklärt:
-      * **target**: `'map'`, dies ist das `<div>`-Container id-Attribut, in welches die Karte gerendert wird
-      * **layers**: `[osmLayer, vecctor_layer]`, die notwendigen Layer, die angelegt wurden
-      * **overlays**: `[overlay]`, das Popup-Fenster, welches wir erstellt haben
-      * **view**: `view`, die View, mit den Startkoordinaten und Zoomfaktor
+   Mit `var map = new ol.Map()` legen wir eine neue Karteninstanz an und weisen sie der Variable `map` zu. Im folgenden werden die einzelnen Properties erklärt:
+   * **target**: `'map'`, dies ist das `<div>`-Container id-Attribut, in welches die Karte gerendert wird
+   * **layers**: `[osmLayer, vecctor_layer]`, die notwendigen Layer, die angelegt wurden
+   * **overlays**: `[overlay]`, das Popup-Fenster, welches wir erstellt haben
+   * **view**: `view`, die View, mit den Startkoordinaten und Zoomfaktor
 
 ## 5 Ergebnis
