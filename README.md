@@ -132,7 +132,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 * ##### Die Map erstellen
    
-   In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element ``` <div id="map" class="map"></div> ```
+   In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element ```Html <div id="map" class="map"></div> ```
 
 
 ## 5 Ergebnis
