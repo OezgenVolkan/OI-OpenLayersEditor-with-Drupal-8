@@ -548,3 +548,11 @@ In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion ein Polygon
 **Polygon Popup**
 * **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Gebäude, Fabrik, Wald, Gebirge, Gewässer, Ackerland)`
 * **OBJECT NAME**: `Eigenname des Objekts`
+
+
+### 5.4 Daten ausgeben
+---
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_data.PNG "WordPress allgemeine Informationen")
+
+Im unteren Bereich des Editors ist eine `textarea` eingebettet. Hier findet die Datenausgabe statt. Je nachdem was als Datenformat gewählt wurde, werden diese Informationen hier ausgegeben. Diese Daten können kopiert und in anderen Programmen weiterverwendet werden.
