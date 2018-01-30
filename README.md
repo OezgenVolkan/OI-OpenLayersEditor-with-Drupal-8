@@ -129,14 +129,21 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
-
-* ##### Die Map erstellen
+---
+#### 4.1.1 Die Map erstellen
+---
+* ##### Der HTML-Code
    
    In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
+   
    ```Html 
 	<div id="map" class="map"></div> 
    ```
+   
    In dem ``<div>``-Container wird die Karte gerendert und angezeigt
+   
+* ##### Der JavaScript-Code
+
    ```javascript
 	var map = new ol.Map(
 	{
