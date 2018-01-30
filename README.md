@@ -133,21 +133,21 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 #### 4.1.1 Die Map erstellen
 ---
 
-* ##### 4.1.1.a Karte in <div>-Container Einbinden
-   ---
-* ##### Der HTML-Code
-   
-   In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
-   
-   ```Html 
-	<div id="map" class="map"></div> 
-   ```
-   
-   In dem ``<div>``-Container wird die Karte gerendert und angezeigt
-   
-* ##### Der JavaScript-Code
+   ##### 4.1.1.1 Die OSM-Karte einbinden
 
-   ```javascript
+   * ##### Der HTML-Code
+   
+      In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
+   
+      ```Html 
+	<div id="map" class="map"></div> 
+      ```
+   
+      In dem ``<div>``-Container wird die Karte gerendert und angezeigt
+   
+   * ##### Der JavaScript-Code
+
+      ```javascript
 	var map = new ol.Map(
 	{
   		target: 'map',
@@ -155,6 +155,6 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
   		overlays: [overlay],
   		view: view
 	});
-   ```
+      ```
 
 ## 5 Ergebnis
