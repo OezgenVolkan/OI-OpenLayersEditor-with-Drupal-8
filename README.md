@@ -519,10 +519,32 @@ Mit dem Button `DELETE FEATURES` lassen sich die gesetzte/eingezeichnete Geometr
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_Point.PNG "WordPress allgemeine Informationen")
 
-In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion einen Punkt setzen kann. Sobald man ein Punkt auf der Karte gesetzt hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen über den Punkt eingeben kann.
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion einen Punkt (in grün dargestellt) setzen kann. Sobald man einen Punkt auf der Karte gesetzt hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen über den Punkt eingeben kann.
 
 **Punkt Popup**
-* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt`
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Cafe, Restaurant, Bar, Fast Food, Supermarkt, Park, Krankenhaus, Bank)`
 * **OBJECT NAME**: `Eigenname des Objekts`
    
    
+### 5.2 Eine Linie zeichnen
+---
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_LineString.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion eine Linie (in grün dargestellt) zeichnen kann. Sobald man eine Linie auf der Karte gezeichnet hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen eingeben kann.
+
+**Linie Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Autobahn, U-Bahn, Strasse, Fahrradweg, Fußgängerweg, Fluss)`
+* **OBJECT NAME**: `Eigenname des Objekts`
+
+
+### 5.3 Ein Polygon zeichnen
+---
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_polygon.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion ein Polygon (in grün dargestellt) zeichnen kann. Sobald man ein Polygon auf der Karte gezeichnet hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen eingeben kann.
+
+**Polygon Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Gebäude, Fabrik, Wald, Gebirge, Gewässer, Ackerland)`
+* **OBJECT NAME**: `Eigenname des Objekts`
