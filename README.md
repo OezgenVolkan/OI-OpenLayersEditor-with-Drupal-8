@@ -490,7 +490,9 @@ Das Ergebnis ist ein erster Prototyp, mit dem man `Punkte`, `Linien` und `Polygo
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor.PNG "WordPress allgemeine Informationen")
 
-Der Editor ist einfach und modern aufgebaut. Im großen linken Bereich ist die interaktive OpenStreetMap-Karte eingebaut. Rechts sinf die Interaktionselemente platziert. Über **INTERACTION TYPE** wählt man die gewünschte Interaktion aus.
+Der Editor ist einfach und modern aufgebaut. Im großen linken Bereich ist die interaktive OpenStreetMap-Karte eingebaut. Rechts sinf die Interaktionselemente platziert. 
+
+Über **INTERACTION TYPE** wählt man die gewünschte Interaktion aus.
 
 `INTERACTION TYPE`:
 * **DRAW**: `Geometrie zeichnen`
@@ -509,3 +511,18 @@ Der Editor ist einfach und modern aufgebaut. Im großen linken Bereich ist die i
 * **GeoJSON**: `Daten in GeoJSON-Format`
 * **KML**: `Daten in KML-Format`
 * **GPX**: `Daten in GPX-Format`
+
+Mit dem Button `DELETE FEATURES` lassen sich die gesetzte/eingezeichnete Geometrie löschen.
+
+### 5.2 Einen Punkt setzen
+---
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_Point.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion einen Punkt setzen kann. Sobald man ein Punkt auf der Karte gesetzt hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen über den Punkt eingeben kann.
+
+**Punkt Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt`
+* **OBJECT NAME**: `Eigenname des Objekts`
+   
+   
