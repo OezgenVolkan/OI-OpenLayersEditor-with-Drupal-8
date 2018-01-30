@@ -168,7 +168,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		});
       ```
       
-      Wir legen mit `var view = new ol.View` eine neue View an. Mit den Properties `**center**` und `**zoom**` werden die Startkoordinaten und Zoomfaktor eingestellt. Hier:
+      Wir legen mit `var view = new ol.View` eine neue View an. Mit den Properties **center** und **zoom** werden die Startkoordinaten und Zoomfaktor eingestellt. Hier:
       * **center**: `berlin (Koordinaten von Berlin)`
       * **zoom**: `17`
       
@@ -204,6 +204,13 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		});
       ```
       
+      Der Vector-Schicht werden die folgenden Properties zugewiesen:
+      * **name**: `name des Vectors (vector_layer_for_editing)`
+      * **source**: `Die Source of Features (new ol.source.Vector())`
+      * **style**: `Der Style der gezeichneten Geometrien`
+      
+      Da wir alle benötigten Variablen erstellt haben, können wir nun die Kernkomponente implementieren. Die `ol.Map()` sieht folgendermaßen aus:
+      
       ```javascript
 		var map = new ol.Map(
 		{
@@ -215,9 +222,9 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
       ```
       
       Mit `var map = new ol.Map()` legen wir eine neue Karteninstanz an und weisen sie der Variable `map` zu. Im folgenden werden die einzelnen Properties erklärt:
-      * **target**: `'map'`
-      * **layers**: `[osmLayer, vecctor_layer]`
-      * **overlays**: `[overlay]`
-      * **view**: `view`
+      * **target**: `'map'`, dies ist das `<div>`-Container id-Attribut, in welches die Karte gerendert wird
+      * **layers**: `[osmLayer, vecctor_layer]`, die notwendigen Layer, die angelegt wurden
+      * **overlays**: `[overlay]`, das Popup-Fenster, welches wir erstellt haben
+      * **view**: `view`, die View, mit den Startkoordinaten und Zoomfaktor
 
 ## 5 Ergebnis
