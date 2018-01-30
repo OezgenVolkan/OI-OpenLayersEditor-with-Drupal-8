@@ -485,8 +485,8 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 
 Das Ergebnis ist ein erster Prototyp, mit dem man `Punkte`, `Linien` und `Polygone` Zeichnen und im nachhinein modifizieren kann. Die Daten zu den eingezeichneten Geometrien werden je nach gewähltem Datentyp in dem Datenfenster angezeigt, diese werden im Moment nicht persistiert. Auch die zusätzlichen Angaben, wie `Object Type` und `Object Name` werden nicht in die Daten mit aufgenommen, diese Funktionalität muss nachgerüstet werden. Im folgenden sind ein Paar Screenshots vom Editor.
 
-### 5.1 Der Editor
 ---
+### 5.1 Der Editor
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor.PNG "WordPress allgemeine Informationen")
 
@@ -514,8 +514,8 @@ Der Editor ist einfach und modern aufgebaut. Im großen linken Bereich ist die i
 
 Mit dem Button `DELETE FEATURES` lassen sich die gesetzte/eingezeichnete Geometrie löschen.
 
-### 5.2 Einen Punkt setzen
 ---
+### 5.2 Einen Punkt setzen
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_Point.PNG "WordPress allgemeine Informationen")
 
@@ -525,9 +525,8 @@ In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion einen Punkt
 * **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Cafe, Restaurant, Bar, Fast Food, Supermarkt, Park, Krankenhaus, Bank)`
 * **OBJECT NAME**: `Eigenname des Objekts`
    
-   
-### 5.2 Eine Linie zeichnen
 ---
+### 5.3 Eine Linie zeichnen
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_LineString.PNG "WordPress allgemeine Informationen")
 
@@ -537,9 +536,8 @@ In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion eine Linie 
 * **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Autobahn, U-Bahn, Strasse, Fahrradweg, Fußgängerweg, Fluss)`
 * **OBJECT NAME**: `Eigenname des Objekts`
 
-
-### 5.3 Ein Polygon zeichnen
 ---
+### 5.4 Ein Polygon zeichnen
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_polygon.PNG "WordPress allgemeine Informationen")
 
@@ -549,9 +547,8 @@ In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion ein Polygon
 * **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Gebäude, Fabrik, Wald, Gebirge, Gewässer, Ackerland)`
 * **OBJECT NAME**: `Eigenname des Objekts`
 
-
-### 5.4 Daten ausgeben
 ---
+### 5.5 Daten ausgeben
 
 ![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_data.PNG "WordPress allgemeine Informationen")
 
