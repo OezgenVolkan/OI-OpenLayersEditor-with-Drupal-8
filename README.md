@@ -140,7 +140,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
       In der `page-editor.php`, zu finden unter `..xampp\htdocs\OI-OpenLayersEditor-with-Wordpress\wp-content\themes\hitchcock\`, erstellen wir das HTML Element 
    
       ```Html 
-	<div id="map" class="map"></div> 
+		<div id="map" class="map"></div> 
       ```
    
       In dem ``<div>``-Container wird die Karte gerendert und angezeigt
@@ -148,13 +148,13 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    * ##### Der JavaScript-Code
 
       ```javascript
-	var map = new ol.Map(
-	{
-  		target: 'map',
-	  	layers: [osmLayer, vector_layer],
-  		overlays: [overlay],
-  		view: view
-	});
+		var map = new ol.Map(
+		{
+			target: 'map',
+			layers: [osmLayer, vector_layer],
+			overlays: [overlay],
+			view: view
+		});
       ```
 
 ## 5 Ergebnis
