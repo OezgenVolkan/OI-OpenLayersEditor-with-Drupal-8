@@ -274,7 +274,7 @@ get_header();
 
 											<hr />
 
-											<button type="submit" class="btn btn-success float-md-right">
+											<button id="save-feature-properties" class="btn btn-success float-md-right">
 												<span class="glyphicon glyphicon-map-marker"></span>
 												Objekt Speichern
 											</button>
@@ -292,10 +292,14 @@ get_header();
 							    		<p>Interaction type:</p>
 							    	</div>
 							      	<div class="editor-content">
-								      	<label>draw</label>
-								      	<input type="radio" id="interaction_type_draw" name="interaction_type" value="draw">
-								      	<label>modify</label>
-								      	<input type="radio" id="interaction_type_modify" name="interaction_type" value="modify">
+							      		<div>
+								      		<label>draw</label>
+								      		<input type="radio" id="interaction_type_draw" name="interaction_type" value="draw">
+							      		</div>
+							      		<div>
+									      	<label>modify</label>
+									      	<input type="radio" id="interaction_type_modify" name="interaction_type" value="modify">
+							      		</div>
 
 							      		<hr />
 							      	</div>

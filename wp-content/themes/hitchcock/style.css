@@ -188,7 +188,7 @@ img {
 	margin-left:5px;
 	color:#c7c7c7;
 	text-transform:uppercase;
-	font-size:18px;
+	font-size:16px;
 	height:50px;
 	padding:15px 0;
 }
@@ -204,14 +204,15 @@ img {
 }
 
 .editor-content {
-	text-align:right;
 	margin-bottom:45px !important;
 }
 
 .editor-content label {
-	padding-left:45px;
+	padding-left:35px;
 	padding-right:10px;
+	padding-top:15px;
 	font-weight:bold;
+	width:115px;
 }
 
 .editor-content select {
@@ -235,7 +236,7 @@ img {
 }
 
 .btn {
-	font-size:2rem !important;
+	font-size:1.5rem !important;
 }
 
 .editor-popup-content small {

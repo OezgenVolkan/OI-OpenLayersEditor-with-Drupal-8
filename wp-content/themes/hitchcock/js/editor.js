@@ -9,92 +9,6 @@
  */
 jQuery(document).on('ready', function()
 {
-	// var raster = new ol.layer.Tile(
-	// {
-	// 	source: new ol.source.OSM()
-	// });
-
-	// var source = new ol.source.Vector();
-	
-	// var vector = new ol.layer.Vector(
-	// {
-	// 	source: source,
-	// 	style: new ol.style.Style(
-	// 	{
-	// 	  	fill: new ol.style.Fill(
-	// 	  	{
-	// 	    	color: 'rgba(255, 255, 255, 0.2)'
-	// 	  	}),
-			
-	// 		stroke: new ol.style.Stroke(
-	// 		{
-	// 	    	color: '#ffcc33',
-	// 	    	width: 2
-	// 	  	}),
-
-	//   		image: new ol.style.Circle(
-	//   		{
-	//     		radius: 7,
-	//     		fill: new ol.style.Fill(
-	//     		{
-	//       			color: '#ffcc33'
-	//     		})
-	//   		})
-	// 	})
-	// });
-
-	// var map = new ol.Map(
-	// {
-	// 	layers: [raster, vector],
-	// 	target: 'map',
-		
-	// 	view: new ol.View(
-	// 	{
-	//   		center: [-11000000, 4600000],
-	//   		zoom: 4
-	// 	})
-	// });
-
-	// var modify = new ol.interaction.Modify({source: source});
-     
- //    map.addInteraction(modify);
-
- //  	var draw, snap; // global so we can remove them later
- //  	var typeSelect = jQuery('#geometry_type');
-
- //  	function addInteractions() 
- //  	{
- //  		console.log(typeSelect.val())
- //        draw = new ol.interaction.Draw(
- //        {
- //        	source: source,
- //        	type: typeSelect.val()
- //        });
-        
- //        map.addInteraction(draw);
- //        snap = new ol.interaction.Snap({source: source});
- //        map.addInteraction(snap);
- // 	}
-
-	// /**
-	// * Handle change event.
-	// */
-	// jQuery('#geometry_type').on('change', function()
-	// {
-	// 	map.removeInteraction(draw);
-	// 	map.removeInteraction(snap);
-	// 	addInteractions();
-	// });	
-
-	// addInteractions();
-
-
-
-	/**
-	 *================================================================
-	 *================================================================
-	 */
-
 	/**
 	 * Elements that make up the popup.
 	 */
@@ -102,6 +16,10 @@ jQuery(document).on('ready', function()
 	var content = document.getElementById('popup-content');
 	var closer = document.getElementById('popup-closer');
 
+	// make interactions global so they can later be removed
+	var select_interaction, draw_interaction, modify_interaction;
+	var $interaction_type = jQuery('[name="interaction_type"]');
+	var $geom_type = jQuery('#geom_type');
 
 	/**
 	* Create an overlay to anchor the popup to the map.
@@ -180,12 +98,6 @@ jQuery(document).on('ready', function()
   		view: view
 	});
 
-	// make interactions global so they can later be removed
-	var select_interaction, draw_interaction, modify_interaction;
-
-	// get the interaction type
-	var $interaction_type = jQuery('[name="interaction_type"]');
-
 	// rebuild interaction when changed
 	$interaction_type.on('click', function(e) 
 	{
@@ -200,9 +112,6 @@ jQuery(document).on('ready', function()
   		}
 	});
 
-	// get geometry type
-	var $geom_type = jQuery('#geom_type');
-	
 	// rebuild interaction when the geometry type is changed
 	$geom_type.on('change', function(e) 
 	{
@@ -290,15 +199,11 @@ jQuery(document).on('ready', function()
   		// when a new feature has been drawn...
   		draw_interaction.on('drawend', function(event) 
   		{
-  			console.log('#object-type-radio-' + $geom_type.val());
   			jQuery('#object-type-radio-' + $geom_type.val()).show();
     		osmLayer.setOpacity(0.2);
-    		// jQuery('#myModal').modal('toggle')
-
+    		
     		var coordinate = event.feature.getGeometry().getLastCoordinate();
-	        // var hdms = ol.coordinate.toStringHDMS(ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326'));
 
-	        // content.innerHTML = '<p>You clicked here:</p><code>' + hdms + '</code>';
 	        overlay.setPosition('bottom-left');
 
     		// create a unique id
@@ -308,28 +213,15 @@ jQuery(document).on('ready', function()
     		// give the feature this id
     		event.feature.setId(id);
 
-
-    		/**
-    		 * ***************** Debug only ****************
-    		 */
-
-    		 	var currentFeat = event.feature;
-    		 	var restOfFeat 	= vector_layer.getSource().getFeatures();
-    		 	var allFeat		= restOfFeat.concat(currentFeat);
-
-    		 /**
-    		 * *********************************************
-    		 */
+		 	var currentFeat = event.feature;
+		 	var restOfFeat 	= vector_layer.getSource().getFeatures();
+		 	var allFeat		= restOfFeat.concat(currentFeat);
 
     		// save the changed data
     		saveData(allFeat);
   		});
 	}
 
-	// add the draw interaction when the page is first shown
-	// addDrawInteraction();
-
-	// shows data in textarea
 	// replace this function by what you need
 	function saveData(feature) 
 	{
@@ -401,4 +293,15 @@ jQuery(document).on('ready', function()
     		return id++;
   		}
 	}
+
+	jQuery('#save-feature-properties').on('click', function(event)
+	{
+		event.preventDefault();
+		
+		var currentFeature = vector_layer.getSource().getFeatures();
+		var featureName = jQuery('#object-name').val();
+
+		alert(currentFeature);
+		currentFeature.setProperties({'name': featureName});
+	});
 });
