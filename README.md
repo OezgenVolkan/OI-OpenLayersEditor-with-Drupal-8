@@ -147,6 +147,8 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    * ##### Der JavaScript-Code
 
+      Der JavaScript sieht wie folgt aus:
+      
       ```javascript
 		var map = new ol.Map(
 		{
@@ -156,5 +158,11 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 			view: view
 		});
       ```
+      
+      Mit `var map = new ol.Map()` legen wir eine neue Karteninstanz an und weisen sie der Variable `map` zu. Im folgenden werden die einzelnen Properties erklärt:
+      * **target**: `'map'`
+      * **layers**: `[osmLayer, vecctor_layer]`
+      * **overlays**: `[overlay]`
+      * **view**: `view`
 
 ## 5 Ergebnis
