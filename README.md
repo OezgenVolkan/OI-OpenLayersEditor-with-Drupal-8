@@ -7,28 +7,28 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 ### [1 Einführung ](#1-einführung)
 * #### [1.1 Gegenstand und Zweck des Dokuments ](#11-gegenstand-und-zweck-des-dokuments)
 * #### [1.2 Aufbau des Dokuments ](#12-aufbau-des-dokuments)
-### 2 Vorstellung des Produktes
-* #### 2.1 Produktvision
-* #### 2.2 Zielgruppe
-### 3 Vorbereitung
-* #### 3.1 Verwendete Anwendungen und Bibliotheken
-   * #### 3.1.1 XAMPP
-   * #### 3.1.2 WordPress
-   * #### 3.1.3 OpenLayers JavaScript-Bibliothek
-### 4 Realisierung
-* #### 4.1 Implementierung der Software
-   * #### 4.1.1 Erstellen der Map und der dafür benötigten Komponenten
-   * #### 4.1.2 Die Nutzerinteraktion implementieren
-### 5 Ergebnis
-* #### 5.1 Der Editor
-* #### 5.2 Einen Punkt setzen
-* #### 5.3 Eine Linie zeichnen
-* #### 5.4 Ein Polygon zeichnen
-* #### 5.2 Die Datenausgabe
+### [2 Vorstellung des Produktes ](#2-vorstellung-des-produktes)
+* #### [2.1 Produktvision ](#21-produktvision)
+* #### [2.2 Zielgruppe ](#22-zielgruppe)
+### [3 Vorbereitung](#3-vorbereitung)
+* #### [3.1 Verwendete Anwendungen und Bibliotheken ](#31-verwendete-anwendungen-und-bibliotheken)
+   * #### [3.1.1 XAMPP ](#311-xampp)
+   * #### [3.1.2 WordPress ](#312-wordpress)
+   * #### [3.1.3 OpenLayers JavaScript-Bibliothek ](#313-openlayers-javascript-bibliothek)
+### [4 Realisierung ](#4-realisierung)
+* #### [4.1 Implementierung der Software ](#41-implementierung-der-software)
+   * #### [4.1.1 Erstellen der Map und der dafür benötigten Komponenten ](#411-erstellen-der-map-und-der-dafür-benötigten-komponenten)
+   * #### [4.1.2 Die Nutzerinteraktion implementieren ](#412-die-nutzerinteraktion-implementieren)
+### [5 Ergebnis ](#5-ergebnis)
+* #### [5.1 Der Editor ](#51-der-editor)
+* #### [5.2 Einen Punkt setzen ](#52-einen-punkt-setzen)
+* #### [5.3 Eine Linie zeichnen ](#53-eine-linie-zeichnen)
+* #### [5.4 Ein Polygon zeichnen ](#54-ein-polygon-zeichnen)
+* #### [5.5 Die Datenausgabe](#55-die-datenausgabe)
 ---
 
 ## 1 Einführung
-### 1.1 Gegenstand und zweck des Dokuments
+### 1.1 Gegenstand und Zweck des Dokuments
 
 Dieses Dokument dient zur Dokumentation eines Projektes für das Modul „Ortsbasierte Informationssysteme“. Die Dokumentation beschreibt hierbei die Entwicklung einer Software. Das Dokument richtet sich dabei an den Entwickler, der sich für die Visualisierung von Geodaten und die Entwicklung von Editoren interessiert und es wird
 davon ausgegangen, dass grundlegende Kenntnisse in der Softwareentwicklung sowie im Umgang mit
