@@ -4,7 +4,7 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 
 ## Gliederung dieser Dokumentation
 
-### [1 Einführung](#1-einfuehrung)
+### [1 Einführung](#1-einführung)
 * #### 1.1 Gegenstand und zweck des Dokuments
 * #### 1.1 Aufbau des Dokuments
 ### 2 Vorstellung des Produktes
