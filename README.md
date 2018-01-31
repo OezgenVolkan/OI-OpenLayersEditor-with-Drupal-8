@@ -2,6 +2,29 @@
 
 Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an der HTW-Berlin entwickelt. Das Projekt verbindet OpenLayers mit WordPress und bietet einen Editor für OpenStreetMaps. Mit dem Editor soll es möglich sein, Punkte, Linien und Polygone in die Karte einzuzeichnen und diese mit Meta-Daten abzuspeichern. Das Ergebnis des Projekts soll ein erster funktionsfähiger Prototyp sein.  
 
+## Gliederung dieser Dokumentation
+
+### 1 Einführung
+* #### 1.1 Gegenstand und zweck des Dokuments
+* #### 1.1 Aufbau des Dokuments
+### 2 Vorstellung des Produktes
+* #### 2.1 Produktvision
+* #### 2.2 Zielgruppe
+### 3 Vorbereitung
+* #### 3.1 Verwendete Anwendungen und Bibliotheken
+   * #### 3.1.1 XAMPP
+   * #### 3.1.2 WordPress
+   * #### 3.1.3 OpenLayers JavaScript-Bibliothek
+### 4 Realisierung
+* #### 4.1 Implementierung der Software
+   * #### 4.1.1 Erstellen der Map und der dafür benötigten Komponenten
+   * #### 4.1.2 Die Nutzerinteraktion implementieren
+### 5 Ergebnis
+* #### 5.1 Der Editor
+* #### 5.2 Einen Punkt setzen
+* #### 5.3 Eine Linie zeichnen
+* #### 5.4 Ein Polygon zeichnen
+* #### 5.2 Die Datenausgabe
 ---
 
 ## 1 Einführung
