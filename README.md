@@ -10,7 +10,7 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 ### [2 Vorstellung des Produktes ](#2-vorstellung-des-produktes)
 * #### [2.1 Produktvision ](#21-produktvision)
 * #### [2.2 Zielgruppe ](#22-zielgruppe)
-### [3 Vorbereitung](#3-vorbereitung)
+### [3 Vorbereitung ](#3-vorbereitung)
 * #### [3.1 Verwendete Anwendungen und Bibliotheken ](#31-verwendete-anwendungen-und-bibliotheken)
    * #### [3.1.1 XAMPP ](#311-xampp)
    * #### [3.1.2 WordPress ](#312-wordpress)
@@ -24,7 +24,7 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 * #### [5.2 Einen Punkt setzen ](#52-einen-punkt-setzen)
 * #### [5.3 Eine Linie zeichnen ](#53-eine-linie-zeichnen)
 * #### [5.4 Ein Polygon zeichnen ](#54-ein-polygon-zeichnen)
-* #### [5.5 Die Datenausgabe](#55-die-datenausgabe)
+* #### [5.5 Die Datenausgabe ](#55-die-datenausgabe)
 ---
 
 ## 1 Einführung
