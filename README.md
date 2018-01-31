@@ -4,9 +4,9 @@ Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an 
 
 ## Gliederung dieser Dokumentation
 
-### [1 Einführung ](#1-einführung)
-* #### [1.1 Gegenstand und Zweck des Dokuments ](#11-gegenstand-und-zweck-des-dokuments)
-* #### [1.2 Aufbau des Dokuments ](#12-aufbau-des-dokuments)
+#### [1 Einführung ](#1-einführung)
+* ##### [1.1 Gegenstand und Zweck des Dokuments ](#11-gegenstand-und-zweck-des-dokuments)
+* ##### [1.2 Aufbau des Dokuments ](#12-aufbau-des-dokuments)
 ### [2 Vorstellung des Produktes ](#2-vorstellung-des-produktes)
 * #### [2.1 Produktvision ](#21-produktvision)
 * #### [2.2 Zielgruppe ](#22-zielgruppe)
