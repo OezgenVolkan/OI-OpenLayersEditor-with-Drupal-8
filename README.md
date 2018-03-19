@@ -2,10 +2,33 @@
 
 Dieses kleine Projekt wird für das Modul "Ortsbasierte Informationssysteme" an der HTW-Berlin entwickelt. Das Projekt verbindet OpenLayers mit WordPress und bietet einen Editor für OpenStreetMaps. Mit dem Editor soll es möglich sein, Punkte, Linien und Polygone in die Karte einzuzeichnen und diese mit Meta-Daten abzuspeichern. Das Ergebnis des Projekts soll ein erster funktionsfähiger Prototyp sein.  
 
+## Gliederung dieser Dokumentation
+
+#### [1 Einführung ](#1-einführung)
+* ##### [1.1 Gegenstand und Zweck des Dokuments ](#11-gegenstand-und-zweck-des-dokuments)
+* ##### [1.2 Aufbau des Dokuments ](#12-aufbau-des-dokuments)
+#### [2 Vorstellung des Produktes ](#2-vorstellung-des-produktes)
+* ##### [2.1 Produktvision ](#21-produktvision)
+* ##### [2.2 Zielgruppe ](#22-zielgruppe)
+#### [3 Vorbereitung ](#3-vorbereitung)
+* ##### [3.1 Verwendete Anwendungen und Bibliotheken ](#31-verwendete-anwendungen-und-bibliotheken)
+   * ##### [3.1.1 XAMPP ](#311-xampp)
+   * ##### [3.1.2 WordPress ](#312-wordpress)
+   * ##### [3.1.3 OpenLayers JavaScript-Bibliothek ](#313-openlayers-javascript-bibliothek)
+#### [4 Realisierung ](#4-realisierung)
+* ##### [4.1 Implementierung der Software ](#41-implementierung-der-software)
+   * ##### [4.1.1 Erstellen der Map und der dafür benötigten Komponenten ](#411-erstellen-der-map-und-der-dafür-benötigten-komponenten)
+   * ##### [4.1.2 Die Nutzerinteraktion implementieren ](#412-die-nutzerinteraktion-implementieren)
+#### [5 Ergebnis ](#5-ergebnis)
+* ##### [5.1 Der Editor ](#51-der-editor)
+* ##### [5.2 Einen Punkt setzen ](#52-einen-punkt-setzen)
+* ##### [5.3 Eine Linie zeichnen ](#53-eine-linie-zeichnen)
+* ##### [5.4 Ein Polygon zeichnen ](#54-ein-polygon-zeichnen)
+* ##### [5.5 Die Datenausgabe ](#55-die-datenausgabe)
 ---
 
 ## 1 Einführung
-### 1.1 Gegenstand und zweck des Dokuments
+### 1.1 Gegenstand und Zweck des Dokuments
 
 Dieses Dokument dient zur Dokumentation eines Projektes für das Modul „Ortsbasierte Informationssysteme“. Die Dokumentation beschreibt hierbei die Entwicklung einer Software. Das Dokument richtet sich dabei an den Entwickler, der sich für die Visualisierung von Geodaten und die Entwicklung von Editoren interessiert und es wird
 davon ausgegangen, dass grundlegende Kenntnisse in der Softwareentwicklung sowie im Umgang mit
@@ -19,7 +42,7 @@ Kapitel dient der Vorbereitung. Hier werden die verwendeten Anwendungen und Bibl
 Aufgaben der Software für das Produkt erläutert. Im 4. Kapitel wird die Realisierung dokumentiert. So
 wird beschrieben wie die Softwarelösung implementiert wird. 
 
-
+---
 ## 2 Vorstellung des Produktes
 ### 2.1 Produktvision
 
@@ -29,7 +52,7 @@ Als Software-Produkt soll mit Webtechnologien ein Editor entwickelt werden, mit 
 
 Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinformationen arbeiten. Genau gesehen kommen alle als Zielgruppe in Frage, die sich für die Erstellung oder Pflege von Karten interessieren, beispielsweise Anwender und Entwickler, die eine Karte im Internet darstellen oder Kartenbasierte Anwendungen erstellen möchten.
 
-
+---
 ## 3 Vorbereitung
 ### 3.1 Verwendete Anwendungen und Bibliotheken
 
@@ -127,6 +150,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
    
    Nach Implementierung der zwei Zeilen in die `header.php` Datei ist OpenLayers nun einsatzbereit.
 
+---
 ## 4 Realisierung
 ### 4.1 Implementierung der Software
 ---
@@ -404,7 +428,7 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		}
    ```
    
-   Die outputData Funktion
+   Die saveData() Funktion
    ```javascript
 		function saveData(feature) 
 		{
@@ -480,7 +504,76 @@ Mögliche Zielgruppe könnten Personen oder Unternehmen sein, die mit Geoinforma
 		}
    ```
 
-
+---
 ## 5 Ergebnis
 
 Das Ergebnis ist ein erster Prototyp, mit dem man `Punkte`, `Linien` und `Polygone` Zeichnen und im nachhinein modifizieren kann. Die Daten zu den eingezeichneten Geometrien werden je nach gewähltem Datentyp in dem Datenfenster angezeigt, diese werden im Moment nicht persistiert. Auch die zusätzlichen Angaben, wie `Object Type` und `Object Name` werden nicht in die Daten mit aufgenommen, diese Funktionalität muss nachgerüstet werden. Im folgenden sind ein Paar Screenshots vom Editor.
+
+---
+### 5.1 Der Editor
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor.PNG "WordPress allgemeine Informationen")
+
+Der Editor ist einfach und modern aufgebaut. Im großen linken Bereich ist die interaktive OpenStreetMap-Karte eingebaut. Rechts sinf die Interaktionselemente platziert. 
+
+Über **INTERACTION TYPE** wählt man die gewünschte Interaktion aus.
+
+`INTERACTION TYPE`:
+* **DRAW**: `Geometrie zeichnen`
+* **MODIFY**: `Geometrie bearbeiten`
+
+Über **GEOMETRY TYPE** lässt sich die gewünschte Geometrie zeichnen.
+
+`GEOMETRY TYPE`:
+* **Point**: `Punkt setzen`
+* **LineString**: `Linie zeichnen`
+* **Polygon**: `Polygon zeichnen`
+
+Über das Auswahlfeld **DATA TYPE** lässt sich das Datenformat einstellen.
+
+`DATA TYPE`:
+* **GeoJSON**: `Daten in GeoJSON-Format`
+* **KML**: `Daten in KML-Format`
+* **GPX**: `Daten in GPX-Format`
+
+Mit dem Button `DELETE FEATURES` lassen sich die gesetzte/eingezeichnete Geometrie löschen.
+
+---
+### 5.2 Einen Punkt setzen
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_Point.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion einen Punkt (in grün dargestellt) setzen kann. Sobald man einen Punkt auf der Karte gesetzt hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen über den Punkt eingeben kann.
+
+**Punkt Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Cafe, Restaurant, Bar, Fast Food, Supermarkt, Park, Krankenhaus, Bank)`
+* **OBJECT NAME**: `Eigenname des Objekts`
+   
+---
+### 5.3 Eine Linie zeichnen
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_LineString.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion eine Linie (in grün dargestellt) zeichnen kann. Sobald man eine Linie auf der Karte gezeichnet hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen eingeben kann.
+
+**Linie Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Autobahn, U-Bahn, Strasse, Fahrradweg, Fußgängerweg, Fluss)`
+* **OBJECT NAME**: `Eigenname des Objekts`
+
+---
+### 5.4 Ein Polygon zeichnen
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_polygon.PNG "WordPress allgemeine Informationen")
+
+In dem Screenshot oben sieht man, wie man mit der `DRAW` Interaktion ein Polygon (in grün dargestellt) zeichnen kann. Sobald man ein Polygon auf der Karte gezeichnet hat, erscheint unten links im Bild ein Popup-Fenster, in dem man zusätzliche Informationen eingeben kann.
+
+**Polygon Popup**
+* **OBJECT TYPE**: `Um was handelt es sich bei dem Objekt (Gebäude, Fabrik, Wald, Gebirge, Gewässer, Ackerland)`
+* **OBJECT NAME**: `Eigenname des Objekts`
+
+---
+### 5.5 Die Datenausgabe
+
+![alt text](https://github.com/OezgenVolkan/OI-OpenLayersEditor-with-WordPress/blob/master/wp-content/themes/hitchcock/images/editor_data.PNG "WordPress allgemeine Informationen")
+
+Im unteren Bereich des Editors ist eine `textarea` eingebettet. Hier findet die Datenausgabe statt. Je nachdem was als Datenformat gewählt wurde, werden diese Informationen hier ausgegeben. Diese Daten können kopiert und in anderen Programmen weiterverwendet werden.
