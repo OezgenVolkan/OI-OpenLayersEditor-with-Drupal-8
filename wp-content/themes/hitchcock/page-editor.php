@@ -6,33 +6,6 @@
 get_header();
 ?>
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  	<div class="modal-dialog" role="document">
-    	
-    	<div class="modal-content">
-      		
-      		<div class="modal-header">
-        		<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          			<span aria-hidden="true">&times;</span>
-        		</button>
-      		</div>
-	  		
-	  		<div class="modal-body">
-	        ...
-	      	</div>
-      		
-      		<div class="modal-footer">
-        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary">Save changes</button>
-    		</div>
-
-    	</div>
-
-	</div>
-</div>
-
 <div class="content section-inner">		
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -49,7 +22,7 @@ get_header();
 					</div>
 					<div class="col-md-11">
 						<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
-						<h2>OpenStreetMap-Editor based on OpenLayers</h2>
+						<h2>OpenHistoricalDataMap-Editor based on OpenLayers</h2>
 					</div>
 				</div>	
 			
@@ -80,173 +53,189 @@ get_header();
 													<label for="object-type">OBJECT TYPE:</label>
 												</div>
 												
-												<div class="object-type-radio-content clearfix" id="object-type-radio-Point">
+												<div class="object-type-radio-content clearfix" id="object-type-radio">
 													
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-cafe" value="cafe">
-														<label class="object-type-radio-label" for="ot-cafe">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/cafe.png" alt="" width="30">
-															<p>CAFE</p>
+														<input type="radio" name="object-type" id="ot-amenity" value="amenity">
+														<label class="object-type-radio-label" for="ot-amenity">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/amenity.png" alt="" width="30">
+															<p>EINRICHTUNG</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-restaurant" value="restaurant">
-														<label class="object-type-radio-label" for="ot-restaurant">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/restaurant.png" alt="" width="30">
-															<p>RESTAURANT</p>
+														<input type="radio" name="object-type" id="ot-building" value="building">
+														<label class="object-type-radio-label" for="ot-building">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/building.png" alt="" width="30">
+															<p>GEBÄUDE</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-bar" value="bar">
-														<label class="object-type-radio-label" for="ot-bar">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/bar.png" alt="" width="30">
-															<p>BAR</p>
+														<input type="radio" name="object-type" id="ot-shop" value="shop">
+														<label class="object-type-radio-label" for="ot-shop">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/shop.png" alt="" width="30">
+															<p>GESCHÄFT</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-fastfood" value="fastfood">
-														<label class="object-type-radio-label" for="ot-fastfood">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/fastfood.png" alt="" width="30">
-															<p>FAST FOOD</p>
+														<input type="radio" name="object-type" id="ot-craft" value="craft">
+														<label class="object-type-radio-label" for="ot-craft">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/craft.png" alt="" width="30">
+															<p>NIEDERLASSUNG</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-supermarket" value="supermarket">
-														<label class="object-type-radio-label" for="ot-supermarket">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/supermarket.png" alt="" width="30">
-															<p>SUPERMARKT</p>
+														<input type="radio" name="object-type" id="ot-historical" value="historical">
+														<label class="object-type-radio-label" for="ot-historical">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/historical.png" alt="" width="30">
+															<p>HISTORISCHES OBJEKT</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-park" value="park">
-														<label class="object-type-radio-label" for="ot-park">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/park.png" alt="" width="30">
-															<p>PARK</p>
+														<input type="radio" name="object-type" id="ot-emergency" value="emergency">
+														<label class="object-type-radio-label" for="ot-emergency">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/emergency.png" alt="" width="30">
+															<p>NOTFALLEINRICHTUNG</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-hospital" value="hospital">
-														<label class="object-type-radio-label" for="ot-hospital">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/hospital.png" alt="" width="30">
-															<p>KRANKENHAUS</p>
+														<input type="radio" name="object-type" id="ot-manmade" value="manmade">
+														<label class="object-type-radio-label" for="ot-manmade">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/manmade.png" alt="" width="30">
+															<p>KUNSTLICHES OBJEKT</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-bank" value="bank">
-														<label class="object-type-radio-label" for="ot-bank">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/bank.png" alt="" width="30">
-															<p>BANK</p>
+														<input type="radio" name="object-type" id="ot-power" value="power">
+														<label class="object-type-radio-label" for="ot-power">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/power.png" alt="" width="30">
+															<p>KRAFTWERK</p>
 														</label>
 													</div>
 
-												</div>
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-airport" value="airport">
+														<label class="object-type-radio-label" for="ot-airport">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/airport.png" alt="" width="30">
+															<p>FLUGHAFEN</p>
+														</label>
+													</div>
 
-												<div class="object-type-radio-content clearfix" id="object-type-radio-LineString">
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-leisure" value="leisure">
+														<label class="object-type-radio-label" for="ot-leisure">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/leisure.png" alt="" width="30">
+															<p>FREIZEITEINRICHTUNG</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-sport" value="sport">
+														<label class="object-type-radio-label" for="ot-sport">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/sport.png" alt="" width="30">
+															<p>SPORTANLAGE</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-military" value="military">
+														<label class="object-type-radio-label" for="ot-military">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/military.png" alt="" width="30">
+															<p>MILITÄRISCHEEINRICHTUNG</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-place" value="place">
+														<label class="object-type-radio-label" for="ot-place">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/place.png" alt="" width="30">
+															<p>ORT</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-landuse" value="landuse">
+														<label class="object-type-radio-label" for="ot-landuse">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/landuse.png" alt="" width="30">
+															<p>BODENNUTZUNG</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-natural" value="natural">
+														<label class="object-type-radio-label" for="ot-natural">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/natural.png" alt="" width="30">
+															<p>NATÜRLICHES GEBIET</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-tourism" value="tourism">
+														<label class="object-type-radio-label" for="ot-tourism">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/tourism.png" alt="" width="30">
+															<p>TOURISMUS GEBIET</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-geological" value="geological">
+														<label class="object-type-radio-label" for="ot-geological">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/geological.png" alt="" width="30">
+															<p>GEOLOGISCH</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-route" value="route">
+														<label class="object-type-radio-label" for="ot-route">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/route.png" alt="" width="30">
+															<p>WEG</p>
+														</label>
+													</div>
 													
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-road" value="road">
-														<label class="object-type-radio-label" for="ot-road">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/road.png" alt="" width="30">
+														<input type="radio" name="object-type" id="ot-highway" value="highway">
+														<label class="object-type-radio-label" for="ot-highway">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/highway.png" alt="" width="30">
 															<p>AUTOBAHN</p>
+														</label>
+													</div>
+
+													<div class="object-type-radio">
+														<input type="radio" name="object-type" id="ot-public_transport" value="public_transport">
+														<label class="object-type-radio-label" for="ot-public_transport">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/public_transport.png" alt="" width="30">
+															<p>ÖFFENTLISCHE VERKEHRSMITTEL</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
 														<input type="radio" name="object-type" id="ot-railroad" value="railroad">
 														<label class="object-type-radio-label" for="ot-railroad">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/railroad.png" alt="" width="30">
-															<p>U-BAHN</p>
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/railroad.png" alt="" width="30">
+															<p>BAHN</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-street" value="street">
-														<label class="object-type-radio-label" for="ot-street">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/street.png" alt="" width="30">
-															<p>STRASSE</p>
+														<input type="radio" name="object-type" id="ot-water" value="water">
+														<label class="object-type-radio-label" for="ot-water">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/water.png" alt="" width="30">
+															<p>WASSERSTRASSE</p>
 														</label>
 													</div>
 
 													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-bike" value="bike">
-														<label class="object-type-radio-label" for="ot-bike">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/bike.png" alt="" width="30">
-															<p>FAHRRADWEG</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-pedestrian" value="pedestrian">
-														<label class="object-type-radio-label" for="ot-pedestrian">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/pedestrian.png" alt="" width="30">
-															<p>FUßG.WEG</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-river" value="river">
-														<label class="object-type-radio-label" for="ot-river">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/river.png" alt="" width="30">
-															<p>FLUSS</p>
-														</label>
-													</div>
-
-												</div>
-
-												<div class="object-type-radio-content clearfix" id="object-type-radio-Polygon">
-													
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-building" value="building">
-														<label class="object-type-radio-label" for="ot-building">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/building.png" alt="" width="30">
-															<p>GEBÄUDE</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-factory" value="factory">
-														<label class="object-type-radio-label" for="ot-factory">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/factory.png" alt="" width="30">
-															<p>FABRIK</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-forest" value="forest">
-														<label class="object-type-radio-label" for="ot-forest">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/forest.png" alt="" width="30">
-															<p>WALD</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-mountain" value="mountain">
-														<label class="object-type-radio-label" for="ot-mountain">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/mountain.png" alt="" width="30">
-															<p>GEBIRGE</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-sea" value="sea">
-														<label class="object-type-radio-label" for="ot-sea">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/sea.png" alt="" width="30">
-															<p>GEWÄSSER</p>
-														</label>
-													</div>
-
-													<div class="object-type-radio">
-														<input type="radio" name="object-type" id="ot-tractor" value="tractor">
-														<label class="object-type-radio-label" for="ot-tractor">
-															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/01/tractor.png" alt="" width="30">
-															<p>ACKERLAND</p>
+														<input type="radio" name="object-type" id="ot-barrier" value="barrier">
+														<label class="object-type-radio-label" for="ot-barrier">
+															<img class="size-full wp-image-45 img-responsive" src="http://localhost/OI-OpenLayersEditor-with-Wordpress/wp-content/uploads/2018/03/barrier.png" alt="" width="30">
+															<p>ABSPERRUNG</p>
 														</label>
 													</div>
 

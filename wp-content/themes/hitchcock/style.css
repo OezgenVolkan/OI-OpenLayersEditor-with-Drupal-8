@@ -281,13 +281,15 @@ img {
 	background:#fff;
 	padding:20px;
 	padding-top:35px;
+	height:200px;
+	overflow-y:scroll;
 }
 
 .object-type-radio-content .object-type-radio{
 	float:left;
 	margin-right:10px;
 	margin-bottom:25px;
-	width:160px;
+	width:100%;
 }
 
 .object-type-radio-content .object-type-radio input[type="radio"]{

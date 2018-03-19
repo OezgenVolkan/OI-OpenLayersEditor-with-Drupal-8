@@ -199,7 +199,7 @@ jQuery(document).on('ready', function()
   		// when a new feature has been drawn...
   		draw_interaction.on('drawend', function(event) 
   		{
-  			jQuery('#object-type-radio-' + $geom_type.val()).show();
+  			jQuery('#object-type-radio').show();
     		osmLayer.setOpacity(0.2);
     		
     		var coordinate = event.feature.getGeometry().getLastCoordinate();
@@ -262,8 +262,6 @@ jQuery(document).on('ready', function()
 	function clearMap() 
 	{
 		jQuery('#object-type-radio-Point').hide();
-		jQuery('#object-type-radio-LineString').hide();
-		jQuery('#object-type-radio-Polygon').hide();
 		osmLayer.setOpacity(1);
   		vector_layer.getSource().clear();
   
